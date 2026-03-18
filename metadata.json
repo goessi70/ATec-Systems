@@ -1,0 +1,8 @@
+{
+  "name": "ATec Systems",
+  "description": "High-End Website für ATec Systems, Spezialist für professionelle Sicherheitsinstallationen wie Alarmanlagen, Brandschutz und Videoüberwachung mit Ajax Systems.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
