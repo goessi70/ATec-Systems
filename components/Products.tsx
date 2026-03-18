@@ -21,13 +21,14 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
   useEffect(() => {
     if (activeIframe) {
       setIsLoading(true);
-      // Use corsproxy.io to fetch the HTML content
-      fetch(`https://corsproxy.io/?${encodeURIComponent(activeIframe)}`)
+      // Using allorigins.win as it's generally more stable for HTML content
+      fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(activeIframe)}`)
         .then(response => {
           if (!response.ok) throw new Error('Network response was not ok.');
-          return response.text();
+          return response.json();
         })
-        .then(contents => {
+        .then(data => {
+          const contents = data.contents;
           if (!contents) throw new Error('No content received');
           
           // Inject a <base> tag so relative assets load correctly
@@ -52,7 +53,7 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
           setIsLoading(false);
         })
         .catch(err => {
-          console.error("Failed to fetch iframe content:", err);
+          console.warn("Could not proxy product details, showing fallback link:", err);
           setIsLoading(false);
           // Fallback to direct link if proxy fails
           setIframeDoc(null);

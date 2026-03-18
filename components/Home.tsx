@@ -23,12 +23,14 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
 
   useEffect(() => {
     setIsLoading(true);
-    fetch(`https://corsproxy.io/?${encodeURIComponent(catalogUrl)}`)
+    // Using allorigins.win as it's generally more stable for HTML content
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(catalogUrl)}`)
       .then(response => {
         if (!response.ok) throw new Error('Network response was not ok.');
-        return response.text();
+        return response.json();
       })
-      .then(contents => {
+      .then(data => {
+        const contents = data.contents;
         if (!contents) throw new Error('No content received');
         
         const baseTag = `<base href="${catalogUrl}">`;
@@ -52,7 +54,8 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
         setIsLoading(false);
       })
       .catch(err => {
-        console.error("Failed to fetch homepage catalog:", err);
+        // Log error but don't break the UI - fallback is handled by iframeDoc being null
+        console.warn("Could not proxy Ajax catalog, showing fallback link:", err);
         setIsLoading(false);
       });
   }, []);
