@@ -1,20 +1,50 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ATec Systems
 
-# Run and deploy your AI Studio app
+High-End Website für ATec Systems, Spezialist für professionelle Sicherheitsinstallationen wie Alarmanlagen, Brandschutz und Videoüberwachung mit Ajax Systems.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/1ed69c24-cf93-42e3-a0ed-087b5683dce2
+- **Modernes Design:** Responsive UI mit Tailwind CSS.
+- **Mehrsprachigkeit:** Unterstützung für Deutsch (DE) und Englisch (EN).
+- **Gemini Assistant:** Integrierter KI-Assistent zur Beantwortung von Kundenanfragen.
+- **Dark Mode:** Unterstützung für helles und dunkles Farbschema.
 
-## Run Locally
+## Technologien
 
-**Prerequisites:**  Node.js
+- **Frontend:** React 19, TypeScript, Vite.
+- **Styling:** Tailwind CSS, Lucide Icons (Font Awesome).
+- **KI:** Google Gemini API (@google/genai).
+- **Routing:** React Router DOM.
 
+## Installation
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Repository klonen:
+   ```bash
+   git clone <repository-url>
+   cd atec-systems
+   ```
+
+2. Abhängigkeiten installieren:
+   ```bash
+   npm install
+   ```
+
+3. Umgebungsvariablen konfigurieren:
+   Erstellen Sie eine `.env` Datei basierend auf der `.env.example` und fügen Sie Ihren Gemini API Key hinzu:
+   ```env
+   GEMINI_API_KEY=Ihr_API_Key_Hier
+   ```
+
+4. Entwicklungsserver starten:
+   ```bash
+   npm run dev
+   ```
+
+5. Build für Produktion:
+   ```bash
+   npm run build
+   ```
+
+## Lizenz
+
+Dieses Projekt ist für ATec Systems erstellt worden. Alle Rechte vorbehalten.
