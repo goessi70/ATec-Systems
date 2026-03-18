@@ -5,7 +5,7 @@
 
 export const ASSETS = {
   custom: {
-    ajaxOverview: "./assets/images/ajax-ema.png" 
+    ajaxOverview: "/assets/images/ajax-ema.png" 
   },
   home: {
     slides: [
