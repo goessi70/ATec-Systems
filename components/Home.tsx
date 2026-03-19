@@ -17,48 +17,6 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
   }, [slides.length]);
 
   const slideData = slides[currentSlide][lang];
-  const [iframeDoc, setIframeDoc] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const catalogUrl = "https://ajax.systems/de/catalogue/";
-
-  useEffect(() => {
-    setIsLoading(true);
-    // Using allorigins.win as it's generally more stable for HTML content
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(catalogUrl)}`)
-      .then(response => {
-        if (!response.ok) throw new Error('Network response was not ok.');
-        return response.json();
-      })
-      .then(data => {
-        const contents = data.contents;
-        if (!contents) throw new Error('No content received');
-        
-        const baseTag = `<base href="${catalogUrl}">`;
-        let finalHtml = contents;
-        
-        // More robust head tag detection
-        const headMatch = finalHtml.match(/<head[^>]*>/i);
-        
-        if (headMatch) {
-          const insertIndex = headMatch.index! + headMatch[0].length;
-          finalHtml = finalHtml.slice(0, insertIndex) + baseTag + finalHtml.slice(insertIndex);
-        } else {
-          finalHtml = baseTag + finalHtml;
-        }
-        
-        // Remove frame-breaking scripts
-        finalHtml = finalHtml.replace(/window\.top\.location/g, 'window.self.location');
-        finalHtml = finalHtml.replace(/top\.location/g, 'self.location');
-        
-        setIframeDoc(finalHtml);
-        setIsLoading(false);
-      })
-      .catch(err => {
-        // Log error but don't break the UI - fallback is handled by iframeDoc being null
-        console.warn("Could not proxy Ajax catalog, showing fallback link:", err);
-        setIsLoading(false);
-      });
-  }, []);
 
   return (
     <div className="animate-fadeIn">
@@ -156,61 +114,6 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      
-      {/* AJAX Katalog Sektion */}
-      <section className={`py-32 transition-colors ${isDark ? 'bg-slate-950' : 'bg-white'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-20 text-center">
-            <span className="text-blue-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">
-              {lang === 'de' ? 'Hardware Katalog' : 'Hardware Catalog'}
-            </span>
-            <h2 className={`text-3xl md:text-5xl font-black mb-6 tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
-              {lang === 'de' ? 'Das Ajax Portfolio direkt erleben' : 'Experience the Ajax Portfolio'}
-            </h2>
-            <div className="w-24 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
-          </div>
-          
-          <div className={`relative w-full h-[85vh] rounded-[4rem] overflow-hidden border shadow-2xl ${
-            isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-blue-500/5'
-          }`}>
-            {isLoading ? (
-              <div className="absolute inset-0 flex flex-col items-center justify-center space-y-6">
-                <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
-                <p className={`font-black text-[10px] uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>
-                  {lang === 'de' ? 'Katalog wird geladen...' : 'Loading catalog...'}
-                </p>
-              </div>
-            ) : iframeDoc ? (
-              <iframe 
-                srcDoc={iframeDoc} 
-                className="w-full h-full border-none"
-                title="Ajax Catalog"
-                sandbox="allow-scripts allow-same-origin allow-forms"
-              />
-            ) : (
-              <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
-                <i className="fas fa-exclamation-triangle text-4xl text-amber-500 mb-6"></i>
-                <h3 className={`text-xl font-black mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
-                  {lang === 'de' ? 'Inhalt konnte nicht geladen werden' : 'Content could not be loaded'}
-                </h3>
-                <p className={`text-sm mb-8 max-w-md ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                  {lang === 'de' 
-                    ? 'Die externe Seite verhindert die direkte Anzeige. Sie können den Katalog stattdessen in einem neuen Fenster öffnen.' 
-                    : 'The external site prevents direct display. You can open the catalog in a new window instead.'}
-                </p>
-                <a 
-                  href={catalogUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all shadow-lg shadow-blue-500/20"
-                >
-                  {lang === 'de' ? 'Katalog extern öffnen' : 'Open catalog externally'}
-                </a>
-              </div>
-            )}
           </div>
         </div>
       </section>
