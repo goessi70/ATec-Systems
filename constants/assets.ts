@@ -82,7 +82,6 @@ export const ASSETS = {
   about: {
     team: "https://i.imgur.com/NJZqknE.png",
     members: [
-      { name: 'Partizia Schwerzmann', img: 'https://i.imgur.com/opVoABH.png' },
       { name: 'Philipp Schwerzmann', img: 'https://i.imgur.com/lln0osi.png' },
       { name: 'Stefan Gössi', img: 'https://i.imgur.com/ukHC0s1.png' },
     ]

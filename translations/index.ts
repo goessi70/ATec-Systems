@@ -41,7 +41,7 @@ export const translations = {
       },
       teamTitle: 'Führung & Expertise',
       teamSub: 'Wir setzen auf flache Hierarchien und gebündeltes Know-how in allen Sicherheitsbereichen.',
-      roles: ['Geschäftsführung', 'Technik-Leitung', 'Projektplanung'],
+      roles: ['Technik-Leitung', 'Projektplanung'],
       founded: {
         tag: 'Historie',
         title: 'Unsere Gründung & Geschichte',
@@ -199,7 +199,7 @@ export const translations = {
       },
       teamTitle: 'Leadership & Expertise',
       teamSub: 'We rely on flat hierarchies and bundled know-how in all security areas.',
-      roles: ['Management', 'Technical Lead', 'Project Planning'],
+      roles: ['Technical Lead', 'Project Planning'],
       founded: {
         tag: 'History',
         title: 'Our Founding & History',

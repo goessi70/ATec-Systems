@@ -25,7 +25,7 @@ const LegalNotice: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, la
 
           <section>
             <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.represented}</h2>
-            <p>Patrizia Schwerzmann {lang === 'de' ? '(Vorstandsvorsitzende)' : '(CEO)'}</p>
+            <p>Philipp Schwerzmann {lang === 'de' ? '(Geschäftsleitung)' : '(Management)'}</p>
           </section>
 
           <section>
