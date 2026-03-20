@@ -12,14 +12,20 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
 
   const filteredProducts = filter === 'All' ? ASSETS.products.list : ASSETS.products.list.filter(p => p.category === filter);
 
-  const baselineLink = "https://ajax.systems/de/catalogue/baseline-intrusion-protection/";
-  const superiorLink = "https://ajax.systems/de/catalogue/superior-intrusion-protection/";
+  const baselineLink = "/assets/Produkte.pdf/Einbruchschutz.pdf";
+  const superiorLink = "/assets/Produkte.pdf/Einbruchschutz.pdf";
   const superiorProductIds = [3, 6]; // Products that stay in Iframe with Baseline
-  const fireLink = "https://ajax.systems/de/catalogue/residence-line-fire-and-life-safety/";
-  const videoLink = "https://ajax.systems/de/catalogue/video-surveillance/";
+  const fireLink = "/assets/Produkte.pdf/Brandschutz.pdf";
+  const videoLink = "/assets/Produkte.pdf/Videoüberwachung.pdf";
+  const smartHomeLink = "/assets/Produkte.pdf/Smart-Home.pdf";
 
   useEffect(() => {
     if (activeIframe) {
+      if (activeIframe.endsWith('.pdf')) {
+        setIframeDoc(null);
+        setIsLoading(false);
+        return;
+      }
       setIsLoading(true);
       // Using allorigins.win as it's generally more stable for HTML content
       fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(activeIframe)}`)
@@ -101,6 +107,12 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                 className="w-full h-full border-none"
                 title="Product Details"
                 sandbox="allow-scripts allow-same-origin allow-forms"
+              />
+            ) : activeIframe?.endsWith('.pdf') ? (
+              <iframe 
+                src={activeIframe} 
+                className="w-full h-full border-none"
+                title="Product Details"
               />
             ) : (
               <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
@@ -249,12 +261,14 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                     onClick={() => {
                       if (product.id === 1 || product.id === 2) {
                         setActiveIframe(superiorLink);
-                      } else if (superiorProductIds.includes(product.id)) {
+                      } else if (product.id === 3) {
                         setActiveIframe(baselineLink);
                       } else if (product.id === 4) {
                         setActiveIframe(fireLink);
                       } else if (product.id === 5) {
                         setActiveIframe(videoLink);
+                      } else if (product.id === 6) {
+                        setActiveIframe(smartHomeLink);
                       }
                     }}
                     className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all ${
