@@ -117,6 +117,7 @@ export const translations = {
         message: 'Wie können wir Ihnen helfen?'
       },
       interests: [
+        'Allgemeine Anfrage',
         'Einbruchmeldeanlage',
         'Brandschutz',
         'Videoüberwachung',
@@ -275,9 +276,10 @@ export const translations = {
         message: 'How can we help you?'
       },
       interests: [
-        'Burglary Alarm System (Ajax)',
-        'Fire Protection / FireProtect',
-        'Video Surveillance / TurretCam',
+        'General Inquiry',
+        'Burglary Alarm System',
+        'Fire Protection',
+        'Video Surveillance',
         'Complete Property Security'
       ],
       submit: 'Send Inquiry',
