@@ -4,7 +4,42 @@ import { translations, Language } from '../translations';
 
 const Contact: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const t = translations[lang].contact;
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      interest: formData.get('interest'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        const result = await response.json();
+        setError(result.error || 'Fehler beim Senden der Nachricht.');
+      }
+    } catch (err) {
+      setError('Verbindung zum Server konnte nicht hergestellt werden.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const contactInfo = [
     { icon: 'fa-phone', label: t.labels.phone, val: '+41 (0) 79 521 80 10', href: 'tel:+41795218010' },
@@ -64,37 +99,48 @@ const Contact: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }
                 <button onClick={() => setSubmitted(false)} className="mt-10 text-blue-500 font-bold hover:underline uppercase tracking-widest text-[10px]">{t.newMsg}</button>
               </div>
             ) : (
-              <form onSubmit={e => { e.preventDefault(); setSubmitted(true); }} className="space-y-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
+                {error && (
+                  <div className="p-4 bg-red-500/10 border border-red-500/20 text-red-500 rounded-xl text-sm font-bold flex items-center gap-3">
+                    <i className="fas fa-exclamation-circle"></i>
+                    {error}
+                  </div>
+                )}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div>
                     <label className={`block text-[10px] uppercase font-black tracking-widest mb-3 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.labels.name}</label>
-                    <input type="text" required placeholder={t.placeholders.name} className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm ${
+                    <input name="name" type="text" required placeholder={t.placeholders.name} className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm ${
                       isDark ? 'bg-slate-800 border-slate-700 text-white placeholder-slate-600' : 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400'
                     }`} />
                   </div>
                   <div>
                     <label className={`block text-[10px] uppercase font-black tracking-widest mb-3 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.labels.email}</label>
-                    <input type="email" required placeholder="name@atec-systems.ch" className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm ${
+                    <input name="email" type="email" required placeholder="name@atec-systems.ch" className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm ${
                       isDark ? 'bg-slate-800 border-slate-700 text-white placeholder-slate-600' : 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400'
                     }`} />
                   </div>
                 </div>
                 <div>
                   <label className={`block text-[10px] uppercase font-black tracking-widest mb-3 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.labels.interest}</label>
-                  <select className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none text-sm ${
+                  <select name="interest" className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all appearance-none text-sm ${
                     isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-slate-50 border-slate-200 text-slate-900'
                   }`}>
-                    {t.interests.map(i => <option key={i}>{i}</option>)}
+                    {t.interests.map(i => <option key={i} value={i}>{i}</option>)}
                   </select>
                 </div>
                 <div>
                   <label className={`block text-[10px] uppercase font-black tracking-widest mb-3 ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.labels.message}</label>
-                  <textarea rows={6} required placeholder={t.placeholders.message} className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm ${
+                  <textarea name="message" rows={6} required placeholder={t.placeholders.message} className={`w-full px-6 py-4 rounded-xl border focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all text-sm ${
                     isDark ? 'bg-slate-800 border-slate-700 text-white placeholder-slate-600' : 'bg-slate-50 border-slate-200 text-slate-900 placeholder-slate-400'
                   }`}></textarea>
                 </div>
-                <button type="submit" className="w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all active:scale-95">
-                  {t.submit}
+                <button 
+                  type="submit" 
+                  disabled={loading}
+                  className={`w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all active:scale-95 flex items-center justify-center gap-3 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                >
+                  {loading && <i className="fas fa-circle-notch animate-spin"></i>}
+                  {loading ? (lang === 'de' ? 'Wird gesendet...' : 'Sending...') : t.submit}
                 </button>
               </form>
             )}
