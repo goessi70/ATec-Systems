@@ -3,6 +3,9 @@ import { createServer as createViteServer } from "vite";
 import path from "path";
 import nodemailer from "nodemailer";
 import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -15,6 +18,7 @@ async function startServer() {
 
   // API Route for Contact Form
   app.post("/api/contact", async (req, res) => {
+    console.log("Received contact request:", req.body);
     const { name, email, interest, message } = req.body;
 
     if (!name || !email || !message) {
@@ -22,10 +26,19 @@ async function startServer() {
     }
 
     // SMTP Configuration
+    const smtpSecure = process.env.SMTP_SECURE === "true" || process.env.SMTP_SECURE === "465";
+    
+    console.log("Initializing SMTP with:", {
+      host: process.env.SMTP_HOST || "mail.hostpoint.ch",
+      port: process.env.SMTP_PORT || "587",
+      secure: smtpSecure,
+      user: process.env.SMTP_USER || "info@atec-systems.ch"
+    });
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST || "mail.hostpoint.ch",
       port: parseInt(process.env.SMTP_PORT || "587"),
-      secure: process.env.SMTP_SECURE === "true", // false for port 587 (STARTTLS)
+      secure: smtpSecure,
       auth: {
         user: process.env.SMTP_USER || "info@atec-systems.ch",
         pass: process.env.SMTP_PASS,
