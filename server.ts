@@ -46,9 +46,10 @@ async function startServer() {
     });
 
     try {
+      const recipient = process.env.CONTACT_TO_EMAIL || "info@atec-systems.ch";
       await transporter.sendMail({
         from: `"${name}" <${process.env.SMTP_USER || email}>`,
-        to: "info@atec-systems.ch",
+        to: recipient,
         subject: `Neue Kontaktanfrage: ${interest}`,
         text: `Name: ${name}\nEmail: ${email}\nInteresse: ${interest}\n\nNachricht:\n${message}`,
         replyTo: email,
