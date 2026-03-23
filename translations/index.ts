@@ -117,9 +117,9 @@ export const translations = {
         message: 'Wie können wir Ihnen helfen?'
       },
       interests: [
-        'Einbruchmeldeanlage (Ajax)',
-        'Brandschutz / FireProtect',
-        'Videoüberwachung / TurretCam',
+        'Einbruchmeldeanlage',
+        'Brandschutz',
+        'Videoüberwachung',
         'Vollständige Objektsicherung'
       ],
       submit: 'Anfrage absenden',
