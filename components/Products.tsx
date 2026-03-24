@@ -199,9 +199,7 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                     </div>
                     <button 
                       onClick={() => {
-                        if (product.id === 1) {
-                          setActiveIframe(hubG3Link);
-                        } else if (product.id === 2) {
+                        if (product.id === 1 || product.id === 2) {
                           setActiveIframe(superiorLink);
                         } else if (product.id === 3) {
                           setActiveIframe(baselineLink);
@@ -217,7 +215,7 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                         isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
                       }`}
                     >
-                      {product.id === 1 ? 'Katalog öffnen' : t.details}
+                      {product.id === 1 ? (lang === 'de' ? 'PDF öffnen' : 'Open PDF') : t.details}
                     </button>
                   </div>
               </div>
