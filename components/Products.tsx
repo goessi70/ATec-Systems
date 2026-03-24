@@ -264,11 +264,18 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                   sandbox="allow-scripts allow-same-origin allow-forms"
                 />
               ) : activeIframe?.endsWith('.pdf') ? (
-                <iframe 
-                  src={activeIframe} 
+                <object 
+                  data={activeIframe} 
+                  type="application/pdf"
                   className="w-full h-full border-none"
-                  title="Product Details"
-                />
+                  key={activeIframe}
+                >
+                  <iframe 
+                    src={activeIframe} 
+                    className="w-full h-full border-none"
+                    title="Product Details"
+                  />
+                </object>
               ) : (
                 <div className="absolute inset-0 flex flex-col items-center justify-center p-12 text-center">
                   <i className="fas fa-exclamation-triangle text-4xl text-amber-500 mb-6"></i>
