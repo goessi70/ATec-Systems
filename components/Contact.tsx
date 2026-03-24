@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
+import { useGoogleReCaptcha, GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { translations, Language } from '../translations';
 
-const Contact: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) => {
+const ContactContent: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -160,6 +160,14 @@ const Contact: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }
         </div>
       </div>
     </div>
+  );
+};
+
+const Contact: React.FC<{ isDark: boolean; lang: Language }> = (props) => {
+  return (
+    <GoogleReCaptchaProvider reCaptchaKey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}>
+      <ContactContent {...props} />
+    </GoogleReCaptchaProvider>
   );
 };
 
