@@ -1,35 +1,42 @@
-import nodemailer from "nodemailer";
+import express from "express";
+import { createServer as createViteServer } from "vite";
+import path from "path";
+import { fileURLToPath } from "url";
+import dotenv from "dotenv";
+import contactRouter from "./app/api/contact/route.ts";
 
-export async function POST(req: Request) {
-  try {
-    const { name, email, message } = await req.json();
+dotenv.config();
 
-    if (!name || !email || !message) {
-      return Response.json({ error: "Fehlende Felder" }, { status: 400 });
-    }
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: false,
-      requireTLS: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
-      },
+async function startServer() {
+  const app = express();
+  const PORT = 3000;
+
+  app.use(express.json());
+
+  // Use API routes
+  app.use("/api/contact", contactRouter);
+
+  // Vite middleware for development
+  if (process.env.NODE_ENV !== "production") {
+    const vite = await createViteServer({
+      server: { middlewareMode: true },
+      appType: "spa",
     });
-
-    await transporter.sendMail({
-      from: `"Website Kontakt" <${process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_TO_EMAIL,
-      replyTo: email,
-      subject: `Neue Nachricht von ${name}`,
-      text: `Name: ${name}\nE-Mail: ${email}\n\n${message}`,
+    app.use(vite.middlewares);
+  } else {
+    const distPath = path.join(process.cwd(), "dist");
+    app.use(express.static(distPath));
+    app.get("*", (req, res) => {
+      res.sendFile(path.join(distPath, "index.html"));
     });
-
-    return Response.json({ ok: true });
-  } catch (error) {
-    console.error(error);
-    return Response.json({ error: "Mailversand fehlgeschlagen" }, { status: 500 });
   }
+
+  app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+  });
 }
+
+startServer();

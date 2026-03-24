@@ -1,73 +1,54 @@
+import { Router } from "express";
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 
-export async function POST(req: Request) {
-  try {
-    console.log("API /api/contact reached");
+dotenv.config();
 
-    const body = await req.json();
-    console.log("Request body keys:", Object.keys(body || {}));
+const router = Router();
 
-    const { name, email, message } = body ?? {};
+router.post("/", async (req, res) => {
+  console.log("Received contact request:", req.body);
+  const { name, email, interest, message } = req.body;
 
-    if (!name || !email || !message) {
-      console.error("Missing fields", { name: !!name, email: !!email, message: !!message });
-      return Response.json({ error: "Fehlende Felder" }, { status: 400 });
-    }
-
-    const host = process.env.SMTP_HOST;
-    const port = Number(process.env.SMTP_PORT || 587);
-    const user = process.env.SMTP_USER;
-    const pass = process.env.SMTP_PASS;
-    const to = process.env.CONTACT_TO_EMAIL;
-
-    console.log("Env check", {
-      hasHost: !!host,
-      port,
-      hasUser: !!user,
-      hasPass: !!pass,
-      hasTo: !!to,
-    });
-
-    if (!host || !user || !pass || !to) {
-      console.error("Missing SMTP env vars");
-      return Response.json({ error: "Server-Konfiguration fehlt" }, { status: 500 });
-    }
-
-    const transporter = nodemailer.createTransport({
-      host,
-      port,
-      secure: false,
-      requireTLS: true,
-      auth: {
-        user,
-        pass,
-      },
-      logger: true,
-      debug: true,
-    });
-
-    console.log("Verifying SMTP connection...");
-    await transporter.verify();
-    console.log("SMTP verify OK");
-
-    const info = await transporter.sendMail({
-      from: `"Website Kontakt" <${user}>`,
-      to,
-      replyTo: email,
-      subject: `Neue Nachricht von ${name}`,
-      text: `Name: ${name}\nE-Mail: ${email}\n\n${message}`,
-    });
-
-    console.log("Mail sent", {
-      messageId: info.messageId,
-      accepted: info.accepted,
-      rejected: info.rejected,
-      response: info.response,
-    });
-
-    return Response.json({ ok: true });
-  } catch (error) {
-    console.error("MAIL ERROR FULL:", error);
-    return Response.json({ error: "Mailversand fehlgeschlagen" }, { status: 500 });
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "Missing required fields" });
   }
-}
+
+  // SMTP Configuration
+  const smtpSecure = process.env.SMTP_SECURE === "true" || process.env.SMTP_SECURE === "465";
+  
+  console.log("Initializing SMTP with:", {
+    host: process.env.SMTP_HOST || "mail.hostpoint.ch",
+    port: process.env.SMTP_PORT || "587",
+    secure: smtpSecure,
+    user: process.env.SMTP_USER || "info@atec-systems.ch"
+  });
+
+  const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "mail.hostpoint.ch",
+    port: parseInt(process.env.SMTP_PORT || "587"),
+    secure: smtpSecure,
+    auth: {
+      user: process.env.SMTP_USER || "info@atec-systems.ch",
+      pass: process.env.SMTP_PASS,
+    },
+  });
+
+  try {
+    const recipient = process.env.CONTACT_TO_EMAIL || "info@atec-systems.ch";
+    await transporter.sendMail({
+      from: `"${name}" <${process.env.SMTP_USER || email}>`,
+      to: recipient,
+      subject: `Neue Kontaktanfrage: ${interest}`,
+      text: `Name: ${name}\nEmail: ${email}\nInteresse: ${interest}\n\nNachricht:\n${message}`,
+      replyTo: email,
+    });
+
+    res.status(200).json({ success: true });
+  } catch (error) {
+    console.error("Email sending error:", error);
+    res.status(500).json({ error: "Failed to send email. Please check SMTP configuration." });
+  }
+});
+
+export default router;

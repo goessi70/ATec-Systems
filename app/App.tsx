@@ -1,17 +1,17 @@
 
 import React, { useState, useEffect } from 'react';
 import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Products from './components/Products';
-import Solutions from './components/Solutions';
-import Services from './components/Services';
-import Contact from './components/Contact';
-import LegalNotice from './components/LegalNotice';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import Founded from './components/Founded';
-import GeminiAssistant from './components/GeminiAssistant';
-import { translations, Language } from './translations';
+import Home from '../components/Home';
+import About from '../components/About';
+import Products from '../components/Products';
+import Solutions from '../components/Solutions';
+import Services from '../components/Services';
+import Contact from '../components/Contact';
+import LegalNotice from '../components/LegalNotice';
+import PrivacyPolicy from '../components/PrivacyPolicy';
+import Founded from '../components/Founded';
+import GeminiAssistant from '../components/GeminiAssistant';
+import { translations, Language } from '../translations';
 
 const Navbar: React.FC<{ isDark: boolean; toggleTheme: () => void; lang: Language; setLang: (l: Language) => void }> = ({ isDark, toggleTheme, lang, setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
