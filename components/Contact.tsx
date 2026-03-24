@@ -1,15 +1,22 @@
-
 import React, { useState } from 'react';
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import { translations, Language } from '../translations';
 
 const Contact: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const t = translations[lang].contact;
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    if (!executeRecaptcha) {
+      setError('reCAPTCHA noch nicht geladen. Bitte kurz warten.');
+      return;
+    }
+
     setLoading(true);
     setError(null);
 
@@ -19,9 +26,14 @@ const Contact: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }
       email: formData.get('email'),
       interest: formData.get('interest'),
       message: formData.get('message'),
+      recaptchaToken: '',
     };
 
     try {
+      // Execute reCAPTCHA
+      const token = await executeRecaptcha('contact_form');
+      data.recaptchaToken = token;
+
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
