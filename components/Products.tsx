@@ -13,13 +13,13 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
 
   const filteredProducts = filter === 'All' ? ASSETS.products.list : ASSETS.products.list.filter(p => p.category === filter);
 
-  const baselineLink = "/assets/Produkte.pdf/Einbruchschutz.pdf";
-  const superiorLink = "/assets/Produkte.pdf/Einbruchschutz.pdf";
+  const baselineLink = "/assets/pdfs/Einbruchschutz.pdf";
+  const superiorLink = "/assets/pdfs/Einbruchschutz.pdf";
   const hubG3Link = "https://ajax.systems/de/catalogue/superior-intrusion-protection/";
   const superiorProductIds = [3, 6]; // Products that stay in Iframe with Baseline
-  const fireLink = "/assets/Produkte.pdf/Brandschutz.pdf";
-  const videoLink = "/assets/Produkte.pdf/Videoüberwachung.pdf";
-  const smartHomeLink = "/assets/Produkte.pdf/Smart-Home.pdf";
+  const fireLink = "/assets/pdfs/Brandschutz.pdf";
+  const videoLink = "/assets/pdfs/Videoueberwachung.pdf";
+  const smartHomeLink = "/assets/pdfs/Smart-Home.pdf";
 
   useEffect(() => {
     if (activeIframe) {
