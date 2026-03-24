@@ -197,37 +197,28 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                     <div className="flex items-center justify-between">
                       <span className={`text-[9px] font-black uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.certified}</span>
                     </div>
-                    {product.id === 1 ? (
-                      <a 
-                        href={hubG3Link}
-                        className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all flex items-center justify-center ${
-                          isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
-                        }`}
-                      >
-                        {t.details}
-                      </a>
-                    ) : (
-                      <button 
-                        onClick={() => {
-                          if (product.id === 2) {
-                            setActiveIframe(superiorLink);
-                          } else if (product.id === 3) {
-                            setActiveIframe(baselineLink);
-                          } else if (product.id === 4) {
-                            setActiveIframe(fireLink);
-                          } else if (product.id === 5) {
-                            setActiveIframe(videoLink);
-                          } else if (product.id === 6) {
-                            setActiveIframe(smartHomeLink);
-                          }
-                        }}
-                        className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all ${
-                          isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
-                        }`}
-                      >
-                        {t.details}
-                      </button>
-                    )}
+                    <button 
+                      onClick={() => {
+                        if (product.id === 1) {
+                          setActiveIframe(hubG3Link);
+                        } else if (product.id === 2) {
+                          setActiveIframe(superiorLink);
+                        } else if (product.id === 3) {
+                          setActiveIframe(baselineLink);
+                        } else if (product.id === 4) {
+                          setActiveIframe(fireLink);
+                        } else if (product.id === 5) {
+                          setActiveIframe(videoLink);
+                        } else if (product.id === 6) {
+                          setActiveIframe(smartHomeLink);
+                        }
+                      }}
+                      className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all ${
+                        isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
+                      }`}
+                    >
+                      {product.id === 1 ? 'Katalog öffnen' : t.details}
+                    </button>
                   </div>
               </div>
             </div>
