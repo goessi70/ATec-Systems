@@ -15,10 +15,10 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
 
   const baselineLink = "/assets/pdfs/Einbruchschutz.pdf";
   const superiorLink = "/assets/pdfs/Einbruchschutz.pdf";
-  const hubG3Link = "https://ajax.systems/de/catalogue/superior-intrusion-protection/";
+  const hubG3Link = "/assets/pdfs/Einbruchschutz.pdf";
   const superiorProductIds = [3, 6]; // Products that stay in Iframe with Baseline
   const fireLink = "/assets/pdfs/Brandschutz.pdf";
-  const videoLink = "/assets/pdfs/Videoueberwachung.pdf";
+  const videoLink = "/assets/pdfs/Videoüberwachung.pdf";
   const smartHomeLink = "/assets/pdfs/Smart-Home.pdf";
 
   useEffect(() => {
@@ -38,25 +38,25 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
         .then(data => {
           const contents = data.contents;
           if (!contents) throw new Error('No content received');
-          
+
           // Inject a <base> tag so relative assets load correctly
           const baseTag = `<base href="${activeIframe}">`;
           let finalHtml = contents;
-          
+
           // More robust head tag detection (case-insensitive, handles attributes)
           const headMatch = finalHtml.match(/<head[^>]*>/i);
-          
+
           if (headMatch) {
             const insertIndex = headMatch.index! + headMatch[0].length;
             finalHtml = finalHtml.slice(0, insertIndex) + baseTag + finalHtml.slice(insertIndex);
           } else {
             finalHtml = baseTag + finalHtml;
           }
-          
+
           // Remove scripts that might cause frame-breaking or redirects
           finalHtml = finalHtml.replace(/window\.top\.location/g, 'window.self.location');
           finalHtml = finalHtml.replace(/top\.location/g, 'self.location');
-          
+
           setIframeDoc(finalHtml);
           setIsLoading(false);
         })
@@ -88,11 +88,10 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
   return (
     <div className={`py-32 transition-colors min-h-screen ${isDark ? 'bg-slate-950' : 'bg-white'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Hero Banner - Konsistentes Design über die ganze App */}
-        <div className={`relative mb-32 rounded-[4rem] overflow-hidden border p-12 md:p-20 flex flex-col lg:flex-row items-center gap-16 ${
-          isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-xl shadow-blue-500/5'
-        }`}>
+        <div className={`relative mb-32 rounded-[4rem] overflow-hidden border p-12 md:p-20 flex flex-col lg:flex-row items-center gap-16 ${isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-xl shadow-blue-500/5'
+          }`}>
           <div className="lg:w-1/2 z-10 text-center lg:text-left">
             <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
               {t.bannerTag}
@@ -123,9 +122,9 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
 
           <div className="lg:w-1/2 relative group">
             <div className="absolute inset-0 bg-blue-500/10 blur-[100px] rounded-full scale-110 group-hover:bg-blue-500/20 transition-all duration-1000"></div>
-            <img 
-              src={ASSETS.custom.ajaxOverview} 
-              alt="Das ATec Systems Sortiment" 
+            <img
+              src={ASSETS.custom.ajaxOverview}
+              alt="Das ATec Systems Sortiment"
               className="relative z-10 w-full h-auto drop-shadow-2xl transform group-hover:scale-105 group-hover:shadow-blue-500/10 transition-all duration-700 grayscale group-hover:grayscale-0 rounded-[2.5rem]"
               onError={(e) => { e.currentTarget.src = ASSETS.home.slides[0].image; }}
             />
@@ -143,11 +142,10 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
-                className={`px-8 py-3 rounded-2xl font-bold text-[10px] uppercase tracking-widest transition-all ${
-                  filter === cat 
-                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20' 
+                className={`px-8 py-3 rounded-2xl font-bold text-[10px] uppercase tracking-widest transition-all ${filter === cat
+                    ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/20'
                     : isDark ? 'bg-slate-900 text-slate-400 hover:bg-slate-800' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
+                  }`}
               >
                 {cat === 'All' ? t.filterAll : cat}
               </button>
@@ -158,16 +156,15 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
         {/* Produkt-Grid - Exakt wie das Lösungen-Grid gestaltet */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {filteredProducts.map(product => (
-            <div key={product.id} className={`group rounded-[3rem] overflow-hidden border transition-all duration-500 hover:-translate-y-2 flex flex-col h-full ${
-              isDark ? 'bg-slate-900 border-slate-800 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500/30 shadow-sm hover:shadow-2xl'
-            }`}>
+            <div key={product.id} className={`group rounded-[3rem] overflow-hidden border transition-all duration-500 hover:-translate-y-2 flex flex-col h-full ${isDark ? 'bg-slate-900 border-slate-800 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500/30 shadow-sm hover:shadow-2xl'
+              }`}>
               <div className="p-6">
                 {/* Bild-Container: aspect-[16/10] und object-cover wie bei den Lösungen */}
                 <div className={`relative aspect-[16/10] overflow-hidden rounded-[2.5rem] transition-all duration-500 ${isDark ? 'bg-slate-800/30 border border-slate-800' : 'bg-slate-100 border border-slate-200'}`}>
-                  <img 
-                    src={product.img} 
-                    alt={product[lang].name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 group-hover:shadow-lg transition-all duration-700 rounded-[2.5rem]" 
+                  <img
+                    src={product.img}
+                    alt={product[lang].name}
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 group-hover:shadow-lg transition-all duration-700 rounded-[2.5rem]"
                   />
                   <div className="absolute top-6 left-6">
                     <span className="bg-blue-600 text-white px-5 py-2 rounded-full text-[9px] font-black uppercase tracking-widest shadow-lg shadow-blue-500/20">
@@ -176,11 +173,11 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                   </div>
                 </div>
               </div>
-              
+
               <div className="px-12 pb-12 flex-grow flex flex-col">
                 <h3 className={`text-xl font-black mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{product[lang].name}</h3>
                 <p className={`text-xs leading-relaxed mb-8 ${isDark ? 'text-slate-400' : 'text-slate-500'}`}>{product[lang].desc}</p>
-                
+
                 {/* Feature-Liste - Identisch zu Lösungen */}
                 <div className="grid grid-cols-2 gap-3 mb-10">
                   {getProductFeatures(product.category).map(feat => (
@@ -193,31 +190,30 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                   ))}
                 </div>
 
-                  <div className="mt-auto pt-8 border-t border-slate-800/10 flex flex-col gap-4">
-                    <div className="flex items-center justify-between">
-                      <span className={`text-[9px] font-black uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.certified}</span>
-                    </div>
-                    <button 
-                      onClick={() => {
-                        if (product.id === 1 || product.id === 2) {
-                          setActiveIframe(superiorLink);
-                        } else if (product.id === 3) {
-                          setActiveIframe(baselineLink);
-                        } else if (product.id === 4) {
-                          setActiveIframe(fireLink);
-                        } else if (product.id === 5) {
-                          setActiveIframe(videoLink);
-                        } else if (product.id === 6) {
-                          setActiveIframe(smartHomeLink);
-                        }
-                      }}
-                      className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all ${
-                        isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
-                      }`}
-                    >
-                      {product.id === 1 ? (lang === 'de' ? 'PDF öffnen' : 'Open PDF') : t.details}
-                    </button>
+                <div className="mt-auto pt-8 border-t border-slate-800/10 flex flex-col gap-4">
+                  <div className="flex items-center justify-between">
+                    <span className={`text-[9px] font-black uppercase tracking-widest ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.certified}</span>
                   </div>
+                  <button
+                    onClick={() => {
+                      if (product.id === 1 || product.id === 2) {
+                        setActiveIframe(superiorLink);
+                      } else if (product.id === 3) {
+                        setActiveIframe(baselineLink);
+                      } else if (product.id === 4) {
+                        setActiveIframe(fireLink);
+                      } else if (product.id === 5) {
+                        setActiveIframe(videoLink);
+                      } else if (product.id === 6) {
+                        setActiveIframe(smartHomeLink);
+                      }
+                    }}
+                    className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all ${isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
+                      }`}
+                  >
+                    {t.details}
+                  </button>
+                </div>
               </div>
             </div>
           ))}
@@ -235,20 +231,18 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                   {lang === 'de' ? 'Katalog-Ansicht' : 'Catalog View'}
                 </h2>
               </div>
-              <button 
+              <button
                 onClick={() => setActiveIframe(null)}
-                className={`inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all ${
-                  isDark ? 'bg-slate-900 text-blue-400 hover:bg-slate-800' : 'bg-slate-100 text-blue-600 hover:bg-slate-200'
-                }`}
+                className={`inline-flex items-center space-x-3 px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all ${isDark ? 'bg-slate-900 text-blue-400 hover:bg-slate-800' : 'bg-slate-100 text-blue-600 hover:bg-slate-200'
+                  }`}
               >
                 <i className="fas fa-times"></i>
                 <span>{lang === 'de' ? 'Schliessen' : 'Close'}</span>
               </button>
             </div>
 
-            <div className={`relative w-full h-[80vh] rounded-[3rem] overflow-hidden border shadow-2xl ${
-              isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200'
-            }`}>
+            <div className={`relative w-full h-[80vh] rounded-[3rem] overflow-hidden border shadow-2xl ${isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200'
+              }`}>
               {isLoading ? (
                 <div className="absolute inset-0 flex flex-col items-center justify-center space-y-6">
                   <div className="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin"></div>
@@ -257,21 +251,21 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                   </p>
                 </div>
               ) : iframeDoc ? (
-                <iframe 
-                  srcDoc={iframeDoc} 
+                <iframe
+                  srcDoc={iframeDoc}
                   className="w-full h-full border-none"
                   title="Product Details"
                   sandbox="allow-scripts allow-same-origin allow-forms"
                 />
               ) : activeIframe?.endsWith('.pdf') ? (
-                <object 
-                  data={activeIframe} 
+                <object
+                  data={activeIframe}
                   type="application/pdf"
                   className="w-full h-full border-none"
                   key={activeIframe}
                 >
-                  <iframe 
-                    src={activeIframe} 
+                  <iframe
+                    src={activeIframe}
                     className="w-full h-full border-none"
                     title="Product Details"
                   />
@@ -283,13 +277,13 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                     {lang === 'de' ? 'Inhalt konnte nicht geladen werden' : 'Content could not be loaded'}
                   </h3>
                   <p className={`text-sm mb-8 max-w-md ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-                    {lang === 'de' 
-                      ? 'Die externe Seite verhindert die direkte Anzeige. Sie können den Katalog stattdessen in einem neuen Fenster öffnen.' 
+                    {lang === 'de'
+                      ? 'Die externe Seite verhindert die direkte Anzeige. Sie können den Katalog stattdessen in einem neuen Fenster öffnen.'
                       : 'The external site prevents direct display. You can open the catalog in a new window instead.'}
                   </p>
-                  <a 
-                    href={activeIframe} 
-                    target="_blank" 
+                  <a
+                    href={activeIframe}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-2xl font-black text-[10px] uppercase tracking-widest transition-all shadow-lg shadow-blue-500/20"
                   >
