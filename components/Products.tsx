@@ -15,6 +15,7 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
 
   const baselineLink = "/assets/Produkte.pdf/Einbruchschutz.pdf";
   const superiorLink = "/assets/Produkte.pdf/Einbruchschutz.pdf";
+  const hubG3Link = "https://ajax.systems/de/catalogue/superior-intrusion-protection/";
   const superiorProductIds = [3, 6]; // Products that stay in Iframe with Baseline
   const fireLink = "/assets/Produkte.pdf/Brandschutz.pdf";
   const videoLink = "/assets/Produkte.pdf/Videoüberwachung.pdf";
@@ -198,7 +199,7 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
                     </div>
                     {product.id === 1 ? (
                       <a 
-                        href={superiorLink}
+                        href={hubG3Link}
                         className={`w-full py-4 rounded-xl font-black text-[10px] uppercase tracking-widest border-2 transition-all flex items-center justify-center ${
                           isDark ? 'border-blue-600 text-blue-500 hover:bg-blue-600 hover:text-white' : 'border-slate-900 text-slate-900 hover:bg-slate-900 hover:text-white'
                         }`}
