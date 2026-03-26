@@ -43,13 +43,13 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
             <div className="space-y-8 min-h-[450px] flex flex-col justify-center">
               <div key={`tag-${currentSlide}`} className="inline-flex items-center space-x-3 px-4 py-2 rounded-full border backdrop-blur-xl animate-slideDown max-w-fit">
                 <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-                <span className={`font-black text-[6px] uppercase tracking-[0.3em] ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
+                <span className={`font-black text-[7px] uppercase tracking-[0.5em] ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
                   {slideData.tag}
                 </span>
               </div>
               
               <div key={`content-${currentSlide}`} className="animate-slideUp space-y-6">
-                <h1 className={`text-2xl md:text-4xl font-black leading-tight tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                <h1 className={`text-2xl md:text-5xl font-black leading-tight tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
                   {slideData.title}
                 </h1>
                 <p className={`text-base font-bold ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>

@@ -21,8 +21,8 @@ export const ASSETS = {
         },
         en: {
           title: "Welcome to ATec Systems",
-          subtitle: "Your safety is our motivation.",
-          description: "With our professional support, you can fully concentrate on your everyday life. Thanks to modern security technology and reliable care, nasty surprises are a thing of the past.",
+          subtitle: "Your safety is our priority.",
+          description: "With our professional support, you can focus entirely on your daily life. Thanks to advanced security technology and reliable monitoring, unexpected intrusions are a thing of the past.",
           tag: "WELCOME"
         }
       },
@@ -39,7 +39,7 @@ export const ASSETS = {
         en: {
           title: "Intrusion Protection",
           subtitle: "Certified property protection by ATec Systems.",
-          description: "Maximum security through the Ajax Jeweller radio protocol. The ATec Systems set detects intrusion attempts in milliseconds and alerts reliably.",
+          description: "Maximum security through the Ajax Jeweller radio protocol. The ATec Systems bundle detects intrusion attempts in milliseconds and alerts reliably.",
           tag: "GRADE 3 SECURITY"
         }
       },
@@ -56,7 +56,7 @@ export const ASSETS = {
         en: {
           title: "Fire Protection",
           subtitle: "Early detection saves lives.",
-          description: "The Ajax FireProtect 2 series monitors smoke, heat, and carbon monoxide. Networked detectors guarantee safety throughout the house.",
+          description: "The Ajax FireProtect 2 series monitors smoke, heat, and carbon monoxide. Interconnected detectors ensure safety across your entire property.",
           tag: "DIN EN 14604"
         }
       },
@@ -73,7 +73,7 @@ export const ASSETS = {
         en: {
           title: "Video Surveillance",
           subtitle: "Intelligent Object Analysis.",
-          description: "Sharp 4K analytics with AI object recognition. Differentiate between humans, animals, and vehicles for precise monitoring.",
+          description: "Ultra-sharp 4K analytics with AI object recognition. Distinguish between people, animals, and vehicles for precise monitoring.",
           tag: "4K AI ANALYTICS"
         }
       }
@@ -97,37 +97,37 @@ export const ASSETS = {
       { 
         id: 1, category: 'Alarm', 
         de: { name: 'Superior Hub G3 Jeweller', desc: 'Kabellose Hub-Zentrale mit Fotoverifizierung. Anschließbar über Ethernet, WLAN und zwei SIM-Karten (2G/LTE).' },
-        en: { name: 'Superior Hub G3 Jeweller', desc: 'Wireless hub control panel with photo verification. Connectable via Ethernet, Wi-Fi, and two SIM cards (2G/LTE).' },
+        en: { name: 'Superior Hub G3 Jeweller', desc: 'Wireless hub control panel with photo verification. Connects via Ethernet, Wi-Fi, and two SIM cards (2G/LTE).' },
         img: 'https://i.imgur.com/LF3cA29.png' 
       },
       { 
         id: 2, category: 'Alarm', 
         de: { name: 'Superior MotionCam (PhOD) Jeweller', desc: 'Kabelloser PIR-Bewegungsmelder mit einem Anti-Masking-System und erweiterten Möglichkeiten zur Fotoverifizierung.' },
-        en: { name: 'Superior MotionCam (PhOD) Jeweller', desc: 'Wireless PIR motion detector with an anti-masking system and advanced photo verification capabilities.' },
+        en: { name: 'Superior MotionCam (PhOD) Jeweller', desc: 'Wireless PIR motion detector with anti-masking and enhanced photo verification capabilities.' },
         img: 'https://i.imgur.com/wkGbCt6.png' 
       },
       { 
         id: 3, category: 'Alarm', 
         de: { name: 'Superior DoorProtect G3 Jeweller', desc: 'Kabelloser Öffnungsmelder mit Reedschalter, Erschütterungs- und Neigungssensoren sowie Fremdfeldüberwachung.' },
-        en: { name: 'Superior DoorProtect G3 Jeweller', desc: 'Wireless opening detector with reed switch, shock and tilt sensors, and external field monitoring.' },
+        en: { name: 'Superior DoorProtect G3 Jeweller', desc: 'Wireless opening detector with reed switch, impact and tilt sensors, and magnetic field monitoring.' },
         img: 'https://i.imgur.com/nPR5jvY.png' 
       },
       { 
         id: 4, category: 'Fire', 
         de: { name: 'FireProtect 2', desc: 'Detektiert Rauch, plötzliche Temperaturanstiege und Kohlenmonoxid.' },
-        en: { name: 'FireProtect 2', desc: 'Detects smoke, sudden temperature rises, and carbon monoxide.' },
+        en: { name: 'FireProtect 2', desc: 'Detects smoke, sudden temperature spikes, and carbon monoxide.' },
         img: 'https://i.imgur.com/FoOT468.png' 
       },
       { 
         id: 5, category: 'Video', 
         de: { name: 'Ajax TurretCam', desc: 'Scharfe 4K-Auflösung mit AI-Objekterkennung für maximale Sicherheit.' },
-        en: { name: 'Ajax TurretCam', desc: 'Sharp 4K resolution with AI object recognition for maximum security.' },
+        en: { name: 'Ajax TurretCam', desc: 'High-definition 4K resolution with AI object recognition for superior security.' },
         img: 'https://i.imgur.com/OB6l021.png' 
       },
       { 
         id: 6, category: 'Control', 
         de: { name: 'Superior KeyPad TouchScreen G3 Jeweller', desc: 'Funk-Bedienteil mit Touchscreen und Authentifizierung über Pass, Tag, Smartphone und Codes.' },
-        en: { name: 'Superior KeyPad TouchScreen G3 Jeweller', desc: 'Radio control panel with touchscreen and authentication via Pass, Tag, smartphone, and codes.' },
+        en: { name: 'Superior KeyPad TouchScreen G3 Jeweller', desc: 'Wireless touch control panel with authentication via Pass, Tag, smartphone, and codes.' },
         img: 'https://i.imgur.com/9g3mjMn.png' 
       },
     ]

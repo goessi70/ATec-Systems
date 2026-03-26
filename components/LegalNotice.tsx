@@ -9,8 +9,8 @@ const LegalNotice: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, la
     <div className={`py-32 transition-colors min-h-screen ${isDark ? 'bg-slate-950' : 'bg-white'}`}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
-          <span className="text-blue-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">{t.tag}</span>
-          <h1 className={`text-3xl md:text-4xl font-black mb-6 tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h1>
+          <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t.tag}</span>
+          <h1 className={`text-3xl md:text-5xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h1>
           <div className="w-20 h-1.5 bg-blue-600 rounded-full"></div>
         </div>
 

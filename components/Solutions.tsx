@@ -22,10 +22,10 @@ const Solutions: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang
           isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-xl shadow-blue-500/5'
         }`}>
           <div className="lg:w-1/2 z-10 text-center lg:text-left">
-            <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.5em] px-5 py-2.5 rounded-full mb-10">
               {t.tag}
             </span>
-            <h2 className={`text-2xl md:text-4xl font-black mb-8 leading-none tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            <h2 className={`text-4xl md:text-5xl font-black mb-10 leading-none tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {t.title}
             </h2>
             <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>
@@ -55,8 +55,8 @@ const Solutions: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-xl">
-            <span className="text-blue-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">{t.tag}</span>
-            <h2 className={`text-3xl md:text-4xl font-black mb-6 tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t.tag}</span>
+            <h2 className={`text-3xl md:text-5xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {lang === 'de' ? 'Unsere Fokusgebiete' : 'Our Focus Areas'}
             </h2>
           </div>

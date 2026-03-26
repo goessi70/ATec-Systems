@@ -11,6 +11,7 @@ import LegalNotice from '../components/LegalNotice';
 import PrivacyPolicy from '../components/PrivacyPolicy';
 import Founded from '../components/Founded';
 import GeminiAssistant from '../components/GeminiAssistant';
+import CookieConsent from '../components/CookieConsent';
 import { translations, Language } from '../translations';
 
 const Navbar: React.FC<{ isDark: boolean; toggleTheme: () => void; lang: Language; setLang: (l: Language) => void }> = ({ isDark, toggleTheme, lang, setLang }) => {
@@ -223,6 +224,7 @@ const App: React.FC = () => {
           </Routes>
         </main>
         <Footer isDark={isDark} lang={lang} />
+        <CookieConsent isDark={isDark} lang={lang} />
         <GeminiAssistant isDark={isDark} lang={lang} />
       </div>
     </HashRouter>

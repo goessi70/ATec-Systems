@@ -93,10 +93,10 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
         <div className={`relative mb-32 rounded-[4rem] overflow-hidden border p-12 md:p-20 flex flex-col lg:flex-row items-center gap-16 ${isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-xl shadow-blue-500/5'
           }`}>
           <div className="lg:w-1/2 z-10 text-center lg:text-left">
-            <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.5em] px-5 py-2.5 rounded-full mb-10">
               {t.bannerTag}
             </span>
-            <h2 className={`text-2xl md:text-4xl font-black mb-8 leading-none tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            <h2 className={`text-3xl md:text-5xl font-black mb-10 leading-none tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {t.bannerTitle}
             </h2>
             <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>
@@ -134,8 +134,8 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
         {/* Sektions-Header mit Filtern */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="max-w-xl">
-            <span className="text-blue-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">{t.catalogTag}</span>
-            <h2 className={`text-3xl md:text-4xl font-black mb-6 tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.catalogTitle}</h2>
+            <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t.catalogTag}</span>
+            <h2 className={`text-3xl md:text-5xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.catalogTitle}</h2>
           </div>
           <div className="flex flex-wrap gap-2">
             {['All', 'Alarm', 'Fire', 'Video', 'Control'].map(cat => (
@@ -224,10 +224,10 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
           <div ref={viewerRef} className="mt-32 pt-32 border-t border-slate-800/10 animate-fadeIn">
             <div className="flex flex-col md:flex-row md:items-center justify-between mb-12 gap-6">
               <div>
-                <span className="text-blue-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">
+                <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">
                   {lang === 'de' ? 'Produktdetails' : 'Product Details'}
                 </span>
-                <h2 className={`text-3xl font-black tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                <h2 className={`text-3xl md:text-5xl font-black tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
                   {lang === 'de' ? 'Katalog-Ansicht' : 'Catalog View'}
                 </h2>
               </div>

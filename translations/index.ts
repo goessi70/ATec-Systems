@@ -150,8 +150,15 @@ export const translations = {
       section2Text: 'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.',
       section3Title: '3. Ihre Rechte',
       section3Text: 'Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten.',
+      cookiesTitle: 'Cookies und ähnliche Technologien',
+      cookiesText: 'Wir verwenden Cookies und ähnliche Technologien, um die Benutzererfahrung zu verbessern und die Sicherheit unserer Website zu gewährleisten. Diese Technologien helfen uns zu verstehen, wie Besucher mit unserer Website interagieren.',
       securityTitle: 'Sicherheitshinweis',
       securityText: 'Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.'
+    },
+    cookieBanner: {
+      text: 'Wir verwenden Cookies und ähnliche Technologien, um das Nutzererlebnis auf unserer Webseite zu verbessern, unseren Datenverkehr zu analysieren und Inhalte und Werbung zu personalisieren.',
+      link: 'Datenschutz',
+      accept: 'Akzeptieren'
     },
     assistant: {
       name: 'ATec KI-Assistent',
@@ -164,60 +171,60 @@ export const translations = {
   en: {
     nav: {
       home: 'Home',
-      about: 'Company Portrait',
+      about: 'Company Profile',
       products: 'Products',
       solutions: 'Solutions',
       services: 'Services',
       contact: 'Contact'
     },
     footer: {
-      description: 'Certified installer for AJAX Systems. Trust in masterly security technology and professional support by ATec Systems.',
+      description: 'Certified specialist for AJAX Systems. Trust in superior security technology and professional support from ATec Systems.',
       quickLinks: 'Quick Links',
       portfolio: 'Ajax Portfolio',
-      concepts: 'Concept Solutions',
+      concepts: 'Integrated Solutions',
       maintenance: 'Maintenance Service',
       advice: 'Request Consultation',
       contact: 'Contact',
       address: 'Allrütiweg 9, CH-6343 Rotkreuz',
       copyright: '2024 ATec Systems. Premium Ajax Partner.',
-      impressum: 'Legal Notice',
-      privacy: 'Privacy Policy'
+      impressum: 'Imprint',
+      privacy: 'Data Protection'
     },
     home: {
-      tagline: 'Status',
-      secured: 'SECURED',
-      ctaConsult: 'Get Advice Now',
-      ctaCatalog: 'Open Catalog'
+      tagline: 'System Status',
+      secured: 'SECURE',
+      ctaConsult: 'Book a Consultation',
+      ctaCatalog: 'View Catalog'
     },
     about: {
       tag: 'ATec Systems',
-      title: 'Company Portrait',
-      intro: 'At ATec Systems, we believe that security should not be a matter of compromise. As a certified installer, we combine manual precision with digital innovation.',
+      title: 'Company Profile',
+      intro: 'At ATec Systems, we believe security should never be a compromise. As a certified specialist, we combine technical precision with digital innovation.',
       history: '',
       stats: {
         years: 'Years of Expertise',
         projects: 'Projects Completed'
       },
       teamTitle: 'Leadership & Expertise',
-      teamSub: 'We rely on flat hierarchies and bundled know-how in all security areas.',
-      roles: ['Technical Lead', 'Project Planning'],
+      teamSub: 'We leverage flat hierarchies and concentrated expertise across all security domains.',
+      roles: ['Technical Director', 'Project Planning'],
       founded: {
         tag: 'History',
-        title: 'Our Founding & History',
-        subtitle: 'From processing technology to a modern security company.',
-        content: 'The roots of ATec Systems go back to 1975. What began as a specialized company for processing technology has developed over decades into a leading provider of security systems. This transformation was characterized by technological progress and the tireless pursuit of the highest quality.',
+        title: 'Our Foundation & History',
+        subtitle: 'From specialized technology to modern security solutions.',
+        content: 'The roots of ATec Systems date back to 1975. What began as a specialized engineering firm has evolved over decades into a leading provider of security systems. This transformation has been driven by technological advancement and a tireless commitment to quality.',
         milestones: [
-          { year: '1975', title: 'Founding', desc: 'Founded as Aufbereitungstechnik AG with a focus on industrial machinery.' },
-          { year: '2009', title: 'Strategic Realignment', desc: 'Generation change and shift of focus to security technology.' },
-          { year: '2015', title: 'Ajax Partnership', desc: 'Start of the exclusive cooperation with AJAX Systems.' },
-          { year: '2026', title: 'Comprehensive Solutions', desc: 'Introduction of new, holistic security concepts.' }
+          { year: '1975', title: 'Founding', desc: 'Established as Aufbereitungstechnik AG with a focus on industrial machinery.' },
+          { year: '2009', title: 'Strategic Realignment', desc: 'Generational transition and strategic shift to security technology.' },
+          { year: '2015', title: 'Ajax Partnership', desc: 'Beginning of our exclusive partnership with AJAX Systems.' },
+          { year: '2026', title: 'Holistic Solutions', desc: 'Introduction of new, comprehensive security concepts.' }
         ]
       }
     },
     products: {
-      bannerTag: 'ATec Starter-Set',
-      bannerTitle: 'One System, No Compromises.',
-      bannerDesc: 'Get the award-winning security package from ATec Systems. All detectors are perfectly matched and ready for immediate use.',
+      bannerTag: 'ATec Starter Set',
+      bannerTitle: 'One System. Maximum Security.',
+      bannerDesc: 'Get the award-winning security package from ATec Systems. All components are perfectly synchronized and ready for immediate deployment.',
       icons: {
         central: 'Hub',
         sensors: 'Sensors',
@@ -225,44 +232,44 @@ export const translations = {
         app: 'App Control'
       },
       catalogTag: 'Hardware Catalog',
-      catalogTitle: 'Components',
+      catalogTitle: 'Individual Components',
       filterAll: 'All',
-      certified: 'ATec certified',
+      certified: 'ATec Certified',
       details: 'Details'
     },
     solutions: {
-      tag: 'Application Areas',
+      tag: 'Fields of Application',
       title: 'Security for Every Sector',
-      subtitle: 'Whether a private retreat or a complex industrial facility – we plan the right shield.',
-      features: ['24/7 Monitoring Connection', 'Encrypted Radio Transmission', 'User-friendly App Control'],
+      subtitle: 'From private residences to complex industrial facilities – we design the perfect protective shield.',
+      features: ['24/7 Monitoring', 'Encrypted Wireless Transmission', 'Intuitive App Control'],
       cta: 'Request Concept',
-      desc: 'Seamless protection against burglary, vandalism, and environmental damage. Our Ajax-based solutions integrate smoothly and grow with your requirements.',
-      commercialDesc: 'For commercial and retail businesses, we offer reliable burglary protection with modern wireless technology. The alarm system enables real-time alerting, app control, and video verification for maximum security. Thanks to tamper protection and flexible expandability, the system is ideal for professional solutions with Ajax Systems.',
-      industrialDesc: 'For industrial and warehouse operations, we offer comprehensive perimeter protection, reliable burglary and sabotage detection, and seamless monitoring of sensitive production and storage areas. The system enables real-time alerting, access control, and video verification to secure machinery, inventory, and logistics zones.',
-      hospitalityDesc: 'For gastronomy and hotels, we offer comprehensive security solutions with a special focus on fire protection, early water damage detection, and intelligent video surveillance. Smoke, heat, and water detectors reliably protect guest rooms, kitchens, and technical areas from damage and business interruptions. Integrated video surveillance allows for discreet monitoring of entrance areas, receptions, and sensitive zones.'
+      desc: 'Seamless protection against burglary, vandalism, and environmental hazards. Our Ajax-based solutions integrate effortlessly and scale with your needs.',
+      commercialDesc: 'For commercial and retail businesses, we offer reliable burglary protection with cutting-edge wireless technology. The system provides real-time alerts, app control, and video verification for maximum security. Featuring tamper protection and flexible scalability, it is the ideal professional solution from Ajax Systems.',
+      industrialDesc: 'For industrial and warehouse facilities, we provide comprehensive perimeter protection, reliable intrusion detection, and seamless monitoring of sensitive areas. The system supports real-time alerting, access control, and video verification to secure machinery, stock, and logistics zones.',
+      hospitalityDesc: 'For hotels and gastronomy, we offer integrated security with a focus on fire protection, early leak detection, and intelligent surveillance. Smoke, heat, and water detectors protect guest rooms and kitchens reliably. Discreet video monitoring ensures security for entrances and reception areas.'
     },
     services: {
       tag: 'Full Service',
-      title: 'Our Path to Protection',
-      subtitle: 'From the first conversation to turnkey handover – we manage your security project.',
+      title: 'Your Path to Protection',
+      subtitle: 'From first consultation to turnkey delivery – we manage your security project end-to-end.',
       whyTitle: 'Why Professionals Choose ATec Systems',
       support: 'Support Hotline',
       steps: [
-        { title: 'On-site Analysis', desc: 'We identify weak points in your property – precisely and discreetly.' },
-        { title: 'Project Planning', desc: 'Individual security concept according to VdS standards.' },
-        { title: 'Clean Installation', desc: 'Clean installation without mess thanks to wireless technology.' },
-        { title: 'Follow-up', desc: 'We remain your partner for maintenance and remote monitoring.' }
+        { title: 'On-site Analysis', desc: 'We identify vulnerabilities in your property – precisely and discreetly.' },
+        { title: 'Project Planning', desc: 'Bespoke security concepts designed to VdS standards.' },
+        { title: 'Clean Installation', desc: 'Professional installation without disruption thanks to wireless technology.' },
+        { title: 'Ongoing Support', desc: 'We remain your partner for maintenance and remote monitoring.' }
       ],
       reasons: [
-        { title: 'Certified & Listed', desc: 'Officially listed Ajax installer and VdS-compliant planning.' },
-        { title: 'Fast Installation', desc: 'Commissioning usually within a single working day.' },
-        { title: 'Intuitive Control', desc: 'Full overview of all sensors via award-winning smartphone app.' }
+        { title: 'Certified & Listed', desc: 'Official Ajax partner and VdS-compliant system planning.' },
+        { title: 'Rapid Installation', desc: 'Full system deployment typically completed within one business day.' },
+        { title: 'Intuitive Control', desc: 'Monitor all sensors via the award-winning smartphone app.' }
       ]
     },
     contact: {
       tag: 'Contact',
-      title: 'Let Us Plan.',
-      subtitle: 'We will create a non-binding security offer for your home or business through ATec Systems.',
+      title: 'Start Your Planning.',
+      subtitle: 'We will design a non-binding security offer tailored to your home or business.',
       labels: {
         phone: 'Call Us',
         email: 'Email',
@@ -272,52 +279,59 @@ export const translations = {
         message: 'Message'
       },
       placeholders: {
-        name: 'Your Name',
+        name: 'Full Name',
         message: 'How can we help you?'
       },
       interests: [
         'General Inquiry',
-        'Burglary Alarm System',
+        'Intrusion Detection',
         'Fire Protection',
         'Video Surveillance',
-        'Complete Property Security'
+        'Comprehensive Security'
       ],
       submit: 'Send Inquiry',
       successTitle: 'Inquiry Received!',
-      successDesc: 'We will get back to you within the next 24 hours.',
-      newMsg: 'Send new message'
+      successDesc: 'We will respond to your request within 24 hours.',
+      newMsg: 'Send Another Message'
     },
     legal: {
       tag: 'Legal',
-      title: 'Legal Notice',
-      provider: 'Provider identification',
+      title: 'Imprint',
+      provider: 'Provider Identification',
       represented: 'Represented by',
       contact: 'Contact',
-      register: 'Register entry',
+      register: 'Register Entry',
       vat: 'VAT Identification Number',
       disclaimer: 'Disclaimer',
-      disclaimerText: 'Despite careful control of the content, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.'
+      disclaimerText: 'Despite careful content control, we assume no liability for the content of external links. The operators of linked sites are solely responsible for their content.'
     },
     privacy: {
       tag: 'Legal',
-      title: 'Privacy Policy',
-      section1Title: '1. Privacy at a glance',
-      section1Sub: 'General information',
-      section1Text: 'The following notes provide a simple overview of what happens to your personal data when you visit our website. Personal data is all data with which you can be personally identified.',
-      section2Title: '2. Data collection on our website',
+      title: 'Data Protection',
+      section1Title: '1. Privacy at a Glance',
+      section1Sub: 'General Information',
+      section1Text: 'The following information provides a simple overview of what happens to your personal data when you visit our website. Personal data is any data that can be used to identify you personally.',
+      section2Title: '2. Data Collection on Our Website',
       section2Sub: 'Who is responsible?',
       section2Text: 'Data processing on this website is carried out by the website operator.',
-      section3Title: '3. Your rights',
-      section3Text: 'You have the right at any time to receive information about the origin, recipient and purpose of your stored personal data free of charge.',
+      section3Title: '3. Your Rights',
+      section3Text: 'You have the right at any time to receive information about the origin, recipient, and purpose of your stored personal data free of charge.',
+      cookiesTitle: 'Cookies and Similar Technologies',
+      cookiesText: 'We use cookies and similar technologies to enhance user experience and ensure the security of our website. These technologies help us understand how visitors interact with our website.',
       securityTitle: 'Security Note',
-      securityText: 'We point out that data transmission on the Internet can have security gaps. Complete protection of data from access by third parties is not possible.'
+      securityText: 'Please note that data transmission over the internet can have security vulnerabilities. Absolute protection of data against access by third parties is not possible.'
+    },
+    cookieBanner: {
+      text: 'We use cookies and similar technologies to enhance the user experience on our website, analyze our traffic, and personalize content and advertising.',
+      link: 'Data Protection',
+      accept: 'Accept'
     },
     assistant: {
       name: 'ATec AI Assistant',
-      greeting: 'Hello! I am your consultant from ATec Systems. How can I help you with security today?',
+      greeting: 'Good day! I am your AI consultant from ATec Systems. How can I assist you with your security needs today?',
       placeholder: 'Ask a question...',
-      error: 'Sorry, I could not generate a response.',
-      connError: 'Unfortunately, there was a connection error. Please try again later.'
+      error: 'I apologize, I was unable to generate a response.',
+      connError: 'There was a connection error. Please try again later.'
     }
   }
 };

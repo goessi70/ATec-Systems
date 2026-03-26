@@ -24,10 +24,10 @@ const Founded: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }
           isDark ? 'bg-slate-900 border-slate-800' : 'bg-slate-50 border-slate-200 shadow-xl shadow-blue-500/5'
         }`}>
           <div className="max-w-3xl">
-            <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.3em] px-4 py-2 rounded-full mb-8">
+            <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.5em] px-5 py-2.5 rounded-full mb-10">
               {t.tag}
             </span>
-            <h1 className={`text-4xl md:text-6xl font-black mb-8 leading-none tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            <h1 className={`text-4xl md:text-7xl font-black mb-10 leading-none tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {t.title}
             </h1>
             <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>

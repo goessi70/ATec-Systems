@@ -65,8 +65,8 @@ const ContactContent: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark,
         <div className="flex flex-col lg:flex-row gap-20">
           <div className="lg:w-1/3 space-y-12">
             <div>
-              <span className="text-blue-500 font-bold uppercase tracking-[0.2em] text-[10px] mb-4 block">{t.tag}</span>
-              <h2 className={`text-3xl md:text-4xl font-black mb-6 tracking-tighter ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h2>
+              <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t.tag}</span>
+              <h2 className={`text-3xl md:text-5xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h2>
               <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>
               <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                 {t.subtitle}
@@ -149,7 +149,7 @@ const ContactContent: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark,
                 <button 
                   type="submit" 
                   disabled={loading}
-                  className={`w-full bg-blue-600 text-white py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all active:scale-95 flex items-center justify-center gap-3 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-blue-600 text-white py-6 rounded-2xl font-black text-xs uppercase tracking-[0.5em] shadow-xl shadow-blue-500/20 hover:bg-blue-700 transition-all active:scale-95 flex items-center justify-center gap-3 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
                   {loading && <i className="fas fa-circle-notch animate-spin"></i>}
                   {loading ? (lang === 'de' ? 'Wird gesendet...' : 'Sending...') : t.submit}
