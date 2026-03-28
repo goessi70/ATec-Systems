@@ -2,11 +2,10 @@
 import { GoogleGenAI } from "@google/genai";
 
 export const getSecurityAdvice = async (userPrompt: string) => {
-  // Correctly initializing GoogleGenAI using a named parameter with process.env.API_KEY directly.
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+  const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
   
   const response = await ai.models.generateContent({
-    model: 'gemini-3-flash-preview',
+    model: 'gemini-2.0-flash',
     contents: userPrompt,
     config: {
       systemInstruction: `Sie sind ein professioneller Sicherheitsberater für ATec Systems, einen zertifizierten Errichter von Ajax Systems Alarmanlagen. 
@@ -17,6 +16,5 @@ export const getSecurityAdvice = async (userPrompt: string) => {
     },
   });
 
-  // Accessing the generated text output via the .text property (not a method).
   return response.text;
 };
