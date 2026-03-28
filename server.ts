@@ -4,6 +4,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
 import contactRouter from "./app/api/contact/route.ts";
+import geminiRouter from "./app/api/gemini/route.ts";
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ async function startServer() {
 
   // Use API routes
   app.use("/api/contact", contactRouter);
+  app.use("/api/gemini", geminiRouter);
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {

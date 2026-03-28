@@ -150,7 +150,75 @@ export const translations = {
     },
     agbPage: {
       tag: 'Rechtliches',
-      title: 'Allgemeine Geschäftsbedingungen'
+      title: 'Allgemeine Geschäftsbedingungen',
+      sections: [
+        {
+          title: '1. Anwendungsbereich',
+          text: ['Die vorliegenden Allgemeinen Geschäftsbedingungen (AGB) regeln den Verkauf, die Lieferung, Installation sowie die Wartung von Sicherheits- und Überwachungssystemen durch ATec-Systems und sind integrierender Bestandteil sämtlicher Verträge zwischen ATec-Systems und ihren Kunden.']
+        },
+        {
+          title: '2. Vertragsabschluss',
+          text: ['Angebote von ATec-Systems sind, sofern nicht ausdrücklich anders vereinbart, ab Ausstellungsdatum maximal drei Monate gültig. Angaben in Katalogen, Preislisten, Prospekten, Zeichnungen und ähnlichen Unterlagen sind unverbindlich. Ein Vertrag kommt zustande durch schriftliche Bestellung des Kunden, durch schriftliche Auftragsbestätigung von ATec-Systems oder durch einen von beiden Parteien unterzeichneten Werkvertrag.']
+        },
+        {
+          title: '3. Leistungen',
+          text: [
+            'ATec-Systems liefert und installiert qualitativ hochwertige Sicherheitsanlagen nach dem jeweils aktuellen Stand der Technik. Der konkrete Leistungsumfang ergibt sich aus dem jeweiligen Vertragsinhalt. ATec-Systems behält sich vor, anstelle der ursprünglich bestellten Produkte neuere Versionen zu liefern, sofern diese funktionell gleichwertig oder besser sind. Ergänzungen, Zusätze oder Änderungen nach Vertragsabschluss werden separat in Rechnung gestellt.',
+            'Die Lieferung erfolgt auf Rechnung und Gefahr des Bestellers. Verzögert sich die Lieferung auf Wunsch des Kunden oder aus Gründen, welche ATec-Systems nicht zu vertreten hat, geht die Gefahr zum ursprünglich vorgesehenen Lieferzeitpunkt auf den Kunden über.'
+          ]
+        },
+        {
+          title: '4. Leistungen des Kunden',
+          text: [
+            'Der Kunde ist verantwortlich für die Koordination sämtlicher am Projekt beteiligten Unternehmen. Er stellt sicher, dass alle baulich notwendigen sowie vertraglich vereinbarten Vorleistungen fach- und termingerecht ausgeführt werden. Der Kunde informiert ATec-Systems rechtzeitig über den Baufortschritt. Durch Verzögerungen oder mangelhafte Vorleistungen entstehende Umtriebe und Mehrkosten werden dem Kunden in Rechnung gestellt.',
+            'Der Kunde hat geeignete und zumutbare Massnahmen zu treffen, um Schäden an den gelieferten Anlagen zu verhindern. Eine sach- und gesetzeskonforme Anwendung der Systeme wird vorausgesetzt.'
+          ]
+        },
+        {
+          title: '5. Preise, Preisanpassungen und Zahlungsbedingungen',
+          text: [
+            'Alle Preise verstehen sich in Schweizer Franken (CHF).<br/>ATec-Systems ist zurzeit nicht Mehrwertsteuerpflichtig, weshalb bei der Rechnungsstellung keine Mehrwertsteuer ausgewiesen wird. Abzüge vom Rechnungsbetrag sind nicht zulässig.',
+            '<span class="font-bold">Zahlungsmodalitäten:</span><ul class="list-disc pl-5 mt-2 space-y-2"><li>Die von ATec-Systems gestellten Rechnungen sind innerhalb der auf der Rechnung angedruckten bzw. ersichtlichen Zahlungsfrist zu begleichen.</li><li>Bei Nichteinhaltung der Zahlungstermine ist ohne Mahnung ein Verzugszins gemäss den gesetzlichen Bestimmungen geschuldet.</li><li>ATec-Systems ist berechtigt, Vorauszahlungen zu verlangen. Werden Zahlungen nicht vertragsgemäss geleistet, ist ATec-Systems berechtigt, am Vertrag festzuhalten oder vom Vertrag zurückzutreten und in beiden Fällen Schadenersatz zu verlangen.</li></ul>',
+            'Bei ausserordentlichen, nicht vorhersehbaren Umständen im Sinne von Art. 373 Abs. 2 OR ist ATec-Systems berechtigt, Preisanpassungen vorzunehmen sowie Teuerungen und erhöhte Lieferantenpreise weiterzuverrechnen.'
+          ]
+        },
+        {
+          title: '6. Eigentumsvorbehalt',
+          text: ['Die gelieferten Anlagen bleiben bis zur vollständigen Bezahlung Eigentum von ATec-Systems.<br/>ATec-Systems ist berechtigt, den Eigentumsvorbehalt auf Kosten des Kunden im öffentlichen Register eintragen zu lassen.']
+        },
+        {
+          title: '7. Produktegarantie',
+          text: [
+            'Die Produktegarantie beträgt, sofern nichts anderes vereinbart wurde, 24 Monate ab Lieferung. Verzögert sich die Lieferung aus Gründen, die ATec-Systems nicht zu vertreten hat, beginnt die Garantiefrist im Zeitpunkt der Lieferbereitschaft.',
+            'Mängel sind innerhalb der Garantiefrist schriftlich zu melden. Während der Garantiezeit ersetzt ATec-Systems fehlerhaftes Material kostenlos. Dienstleistungen sind von der Garantie ausgeschlossen.',
+            'ATec-Systems entscheidet nach eigenem Ermessen über Nachbesserung oder Ersatzlieferung. Die Garantiefrist wird durch Nachbesserungen nicht unterbrochen.',
+            'Von der Garantie ausgeschlossen sind Schäden infolge natürlicher Abnützung, unsachgemässer Anwendung, mangelnder Wartung, äusserer Einwirkungen, Eingriffe durch Dritte oder anderer Gründe, welche ATec-Systems nicht zu vertreten hat.'
+          ]
+        },
+        {
+          title: '8. Haftung',
+          text: [
+            'ATec-Systems gewährt gegenüber dem Kunden die unter Ziffer 7 genannten Garantien. Die Garantie ergibt sich im Einzelnen aus den Leistungsbeschrieben. Bei Abschluss eines Wartungsvertrages gelten die darin vereinbarten Garantien. ATec-Systems haftet nur für grobfahrlässig verursachte Schäden. ATec-Systems haftet nicht für Arbeiten durch Drittfirmen. Alle weiteren Haftungsansprüche gegenüber ATec-Systems, gleich aus welchem Rechtsgrund, soweit gesetzlich zulässig, werden ausgeschlossen. ATec-Systems kann insbesondere auch nicht für Schäden oder Folgeschäden wie nachfolgend und nicht abschliessend aufgezählt haftbar gemacht werden:',
+            '<ul class="list-disc pl-5 space-y-2 mt-2"><li>Polizei-, Feuerwehr- und Alarmempfänger-Einsätze</li><li>die vom Kunden zu veranlassenden Sicherheitsmassnahmen, bei teilweiser oder vollständiger Ausserbetriebsetzung der Anlage, auch infolge von Instandstellungsarbeiten</li><li>Störungen oder Versagen der Anlage</li><li>Unsachgemässe Anwendung durch den Kunden oder Drittpersonen</li><li>Für Glasschäden infolge Wartungsarbeiten/Funktionstests</li><li>direkt oder indirekte Folgen von Fehlalarmen</li><li>entgangener Gewinn oder Ansprüche Dritter</li><li>Fehlauslösungen von Löschanlagen (Löschmittelersatz und Folgeschäden)</li><li>den Einsatz von Bewachungspersonal</li><li>Kostenersatz aufgrund von Mehraufwendungen des Anlagebetreibers oder Dritter</li><li>Körper-, Sach- und Vermögensschäden infolge Einbruchs, Überfall oder dergleichen</li><li>Beeinträchtigung der Funktionen der Anlage infolge baulicher Veränderungen</li><li>Schäden infolge eines Datenverlustes; die Datenarchivierung obliegt dem Kunden</li><li>Etc.</li></ul>',
+            'Führt ATec-Systems im Auftrag des Kunden Installationsarbeiten aus, so obliegt die Haftung und Instandstellung für entstandene Schäden oder Beschädigungen wie verdeckte Leitungen, Bohrarbeiten oder Durchbrüche, beim Kunden. ATec-Systems übernimmt keine Haftung für verspätete Lieferungen, sofern die Verspätung durch einen Dritten oder höhere Gewalt verursacht wurde.'
+          ]
+        },
+        {
+          title: '9. Besondere Bestimmungen Geistiges Eigentum',
+          text: [
+            'Sämtliche Anlagenkonzepte, Softwareprogramme, Dokumentationen und technischen Unterlagen bleiben geistiges Eigentum von ATec-Systems. Der Kunde erhält ein nicht übertragbares Nutzungsrecht für die Dauer des Vertragsverhältnisses.',
+            'Der Kunde erhält das Recht, die Anlage und die Dokumentation für die Vertragslaufzeit zu nutzen. Sofern nichts anderes vereinbart, ist der Besteller nicht berechtigt, die Anlage oder Teile der Anlage nachzubauen oder durch einen Dritten nachbauen zu lassen, zugehörige Softwareprogramme und- oder Dokumentationen zu kopieren oder vervielfältigen oder Dritten zugänglich machen oder diese zu veröffentlichen.'
+          ]
+        },
+        {
+          title: '10. Salvatorische Klausel',
+          text: ['Sollten einzelne Bestimmungen dieser AGB ganz oder teilweise unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die unwirksame Bestimmung wird durch eine solche ersetzt, die dem wirtschaftlichen Zweck am nächsten kommt.']
+        },
+        {
+          title: '11. Anwendbares Recht und Gerichtsstand',
+          text: ['Der Vertrag untersteht schweizerischem Recht. Gerichtsstand ist Zug im Kanton Zug.']
+        }
+      ]
     },
     privacy: {
       tag: 'Rechtliches',
@@ -330,7 +398,75 @@ export const translations = {
     },
     agbPage: {
       tag: 'Legal',
-      title: 'Terms and Conditions'
+      title: 'Terms and Conditions',
+      sections: [
+        {
+          title: '1. Scope of Application',
+          text: ['These General Terms and Conditions (GTC) regulate the sale, delivery, installation, and maintenance of security and surveillance systems by ATec-Systems and are an integral part of all contracts between ATec-Systems and its customers.']
+        },
+        {
+          title: '2. Conclusion of Contract',
+          text: ['Unless otherwise expressly agreed, offers from ATec-Systems are valid for a maximum of three months from the date of issue. Information in catalogs, price lists, brochures, drawings, and similar documents is non-binding. A contract is concluded by a written order from the customer, a written order confirmation from ATec-Systems, or a contract for work and services signed by both parties.']
+        },
+        {
+          title: '3. Services',
+          text: [
+            'ATec-Systems delivers and installs high-quality security systems according to the current state of technology. The specific scope of services is determined by the respective contract content. ATec-Systems reserves the right to deliver newer versions instead of the originally ordered products, provided they are functionally equivalent or better. Additions, supplements, or changes after the conclusion of the contract will be invoiced separately.',
+            'Delivery is at the expense and risk of the customer. If delivery is delayed at the customer\'s request or for reasons for which ATec-Systems is not responsible, the risk passes to the customer at the originally scheduled delivery time.'
+          ]
+        },
+        {
+          title: '4. Customer Responsibilities',
+          text: [
+            'The customer is responsible for coordinating all companies involved in the project. They must ensure that all structurally necessary and contractually agreed preparatory work is carried out professionally and on time. The customer shall inform ATec-Systems in good time about the construction progress. Any inconvenience and additional costs caused by delays or defective preparatory work will be invoiced to the customer.',
+            'The customer must take suitable and reasonable measures to prevent damage to the delivered systems. Proper and legal use of the systems is required.'
+          ]
+        },
+        {
+          title: '5. Prices, Price Adjustments, and Payment Terms',
+          text: [
+            'All prices are in Swiss Francs (CHF).<br/>ATec-Systems is currently not subject to VAT, which is why no VAT is shown on invoices. Deductions from the invoice amount are not permitted.',
+            '<span class="font-bold">Payment Modalities:</span><ul class="list-disc pl-5 mt-2 space-y-2"><li>Invoices issued by ATec-Systems are to be paid within the payment period printed or visible on the invoice.</li><li>In the event of non-compliance with the payment deadlines, default interest in accordance with statutory provisions is owed without a reminder.</li><li>ATec-Systems is entitled to demand advance payments. If payments are not made in accordance with the contract, ATec-Systems is entitled to adhere to the contract or withdraw from the contract and, in both cases, to claim damages.</li></ul>',
+            'In extraordinary, unforeseeable circumstances within the meaning of Art. 373 Para. 2 OR, ATec-Systems is entitled to make price adjustments and to pass on inflation and increased supplier prices.'
+          ]
+        },
+        {
+          title: '6. Retention of Title',
+          text: ['The delivered systems remain the property of ATec-Systems until full payment is received.<br/>ATec-Systems is entitled to have the retention of title entered in the public register at the customer\'s expense.']
+        },
+        {
+          title: '7. Product Warranty',
+          text: [
+            'Unless otherwise agreed, the product warranty is 24 months from delivery. If delivery is delayed for reasons for which ATec-Systems is not responsible, the warranty period begins at the time of readiness for delivery.',
+            'Defects must be reported in writing within the warranty period. During the warranty period, ATec-Systems replaces defective material free of charge. Services are excluded from the warranty.',
+            'ATec-Systems decides at its own discretion on repair or replacement. The warranty period is not interrupted by repairs.',
+            'The warranty excludes damage caused by natural wear and tear, improper use, lack of maintenance, external influences, interventions by third parties, or other reasons for which ATec-Systems is not responsible.'
+          ]
+        },
+        {
+          title: '8. Liability',
+          text: [
+            'ATec-Systems grants the customer the warranties stated under section 7. The warranty details are specified in the service descriptions. If a maintenance contract is concluded, the warranties agreed therein apply. ATec-Systems is only liable for damage caused by gross negligence. ATec-Systems is not liable for work carried out by third-party companies. All other liability claims against ATec-Systems, regardless of the legal grounds, are excluded to the extent permitted by law. In particular, ATec-Systems cannot be held liable for damages or consequential damages such as, but not limited to:',
+            '<ul class="list-disc pl-5 space-y-2 mt-2"><li>Police, fire brigade, and alarm receiver interventions</li><li>Security measures to be arranged by the customer in the event of partial or complete shutdown of the system, including due to repair work</li><li>Malfunctions or failure of the system</li><li>Improper use by the customer or third parties</li><li>Glass damage due to maintenance work/functional tests</li><li>Direct or indirect consequences of false alarms</li><li>Loss of profit or claims by third parties</li><li>False triggering of extinguishing systems (replacement of extinguishing agents and consequential damage)</li><li>The deployment of security personnel</li><li>Reimbursement of costs due to additional expenses of the system operator or third parties</li><li>Personal injury, property damage, and financial loss due to burglary, robbery, or similar</li><li>Impairment of the system\'s functions due to structural changes</li><li>Damage resulting from data loss; data archiving is the customer\'s responsibility</li><li>Etc.</li></ul>',
+            'If ATec-Systems carries out installation work on behalf of the customer, the customer is responsible for liability and repairs for any damage or damage such as hidden cables, drilling work, or breakthroughs. ATec-Systems assumes no liability for delayed deliveries, provided the delay was caused by a third party or force majeure.'
+          ]
+        },
+        {
+          title: '9. Special Provisions on Intellectual Property',
+          text: [
+            'All system concepts, software programs, documentation, and technical documents remain the intellectual property of ATec-Systems. The customer receives a non-transferable right of use for the duration of the contractual relationship.',
+            'The customer receives the right to use the system and documentation for the term of the contract. Unless otherwise agreed, the customer is not entitled to copy the system or parts of the system or have them copied by a third party, to copy or reproduce related software programs and/or documentation or make them accessible to third parties or to publish them.'
+          ]
+        },
+        {
+          title: '10. Severability Clause',
+          text: ['Should individual provisions of these GTC be wholly or partially invalid, the validity of the remaining provisions remains unaffected. The invalid provision will be replaced by one that comes closest to its economic purpose.']
+        },
+        {
+          title: '11. Applicable Law and Jurisdiction',
+          text: ['The contract is subject to Swiss law. The place of jurisdiction is Zug in the Canton of Zug.']
+        }
+      ]
     },
     privacy: {
       tag: 'Legal',
