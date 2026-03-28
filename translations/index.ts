@@ -22,7 +22,8 @@ export const translations = {
       address: 'Allrütiweg 9, CH-6343 Rotkreuz',
       copyright: '2024 ATec Systems. Premium Ajax Partner.',
       impressum: 'Impressum',
-      privacy: 'Datenschutz'
+      privacy: 'Datenschutz',
+      agb: 'AGB'
     },
     home: {
       tagline: 'Status',
@@ -140,6 +141,10 @@ export const translations = {
       disclaimer: 'Haftungsausschluss',
       disclaimerText: 'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.'
     },
+    agbPage: {
+      tag: 'Rechtliches',
+      title: 'Allgemeine Geschäftsbedingungen'
+    },
     privacy: {
       tag: 'Rechtliches',
       title: 'Datenschutz',
@@ -190,7 +195,8 @@ export const translations = {
       address: 'Allrütiweg 9, CH-6343 Rotkreuz',
       copyright: '2024 ATec Systems. Premium Ajax Partner.',
       impressum: 'Imprint',
-      privacy: 'Data Protection'
+      privacy: 'Data Protection',
+      agb: 'Terms and Conditions'
     },
     home: {
       tagline: 'System Status',
@@ -307,6 +313,10 @@ export const translations = {
       vat: 'VAT Identification Number',
       disclaimer: 'Disclaimer',
       disclaimerText: 'Despite careful content control, we assume no liability for the content of external links. The operators of linked sites are solely responsible for their content.'
+    },
+    agbPage: {
+      tag: 'Legal',
+      title: 'Terms and Conditions'
     },
     privacy: {
       tag: 'Legal',

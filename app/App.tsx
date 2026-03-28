@@ -10,6 +10,7 @@ import Contact from '../components/Contact';
 import LegalNotice from '../components/LegalNotice';
 import PrivacyPolicy from '../components/PrivacyPolicy';
 import Founded from '../components/Founded';
+import AGB from '../components/AGB';
 import GeminiAssistant from '../components/GeminiAssistant';
 import CookieConsent from '../components/CookieConsent';
 import { translations, Language } from '../translations';
@@ -199,8 +200,9 @@ const Footer: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang })
         </div>
         <div className={`mt-32 pt-12 border-t text-sm font-bold flex flex-col md:flex-row justify-between items-center opacity-60 ${isDark ? 'border-slate-900' : 'border-slate-200'}`}>
           <p>&copy; {t.copyright}</p>
-          <div className="flex space-x-12 mt-8 md:mt-0">
+          <div className="flex space-x-6 md:space-x-12 mt-8 md:mt-0">
             <Link to="/impressum" className="hover:text-blue-500 transition-colors">{t.impressum}</Link>
+            <Link to="/agb" className="hover:text-blue-500 transition-colors">{t.agb}</Link>
             <Link to="/datenschutz" className="hover:text-blue-500 transition-colors">{t.privacy}</Link>
           </div>
         </div>
@@ -229,6 +231,7 @@ const App: React.FC = () => {
             <Route path="/leistungen" element={<Services isDark={isDark} lang={lang} />} />
             <Route path="/kontakt" element={<Contact isDark={isDark} lang={lang} />} />
             <Route path="/impressum" element={<LegalNotice isDark={isDark} lang={lang} />} />
+            <Route path="/agb" element={<AGB isDark={isDark} lang={lang} />} />
             <Route path="/datenschutz" element={<PrivacyPolicy isDark={isDark} lang={lang} />} />
             <Route path="/gegruendet" element={<Founded isDark={isDark} lang={lang} />} />
           </Routes>
