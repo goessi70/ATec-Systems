@@ -34,8 +34,12 @@ const GeminiAssistant: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark
     try {
       const response = await getSecurityAdvice(userMsg);
       setMessages(prev => [...prev, { role: 'ai', text: response || t.error }]);
-    } catch (error) {
-      setMessages(prev => [...prev, { role: 'ai', text: t.connError }]);
+    } catch (error: any) {
+      if (error.message === "QUOTA_EXCEEDED") {
+        setMessages(prev => [...prev, { role: 'ai', text: t.quotaError }]);
+      } else {
+        setMessages(prev => [...prev, { role: 'ai', text: t.connError }]);
+      }
     } finally {
       setIsLoading(false);
     }

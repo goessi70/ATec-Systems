@@ -4,7 +4,7 @@ export const getSecurityAdvice = async (userPrompt: string) => {
     throw new Error("API key is not defined.");
   }
 
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`, {
+  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,6 +25,12 @@ export const getSecurityAdvice = async (userPrompt: string) => {
   if (!response.ok) {
     const errorBody = await response.text();
     console.error("Gemini API Error:", response.status, errorBody);
+    
+    // Specifically catch Quota/Billing errors (429) to inform the user
+    if (response.status === 429) {
+      throw new Error("QUOTA_EXCEEDED");
+    }
+    
     throw new Error("Verbindungsfehler zur KI-API");
   }
 

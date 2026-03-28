@@ -166,7 +166,8 @@ export const translations = {
       greeting: 'Guten Tag! Ich bin Ihr Berater von ATec Systems. Wie kann ich Ihnen beim Thema Sicherheit heute weiterhelfen?',
       placeholder: 'Frage stellen...',
       error: 'Entschuldigung, ich konnte keine Antwort generieren.',
-      connError: 'Leider gab es einen Fehler bei der Verbindung. Bitte versuchen Sie es später erneut.'
+      connError: 'Leider gab es einen Fehler bei der Verbindung. Bitte versuchen Sie es später erneut.',
+      quotaError: 'Der intelligente KI-Assistent ist aufgrund fehlender Google Cloud API-Kontingente (Abrechnung nicht aktiviert) derzeit pausiert. Bitte kontaktieren Sie uns direkt über das Kontaktformular.'
     }
   },
   en: {
@@ -333,7 +334,8 @@ export const translations = {
       greeting: 'Good day! I am your AI consultant from ATec Systems. How can I assist you with your security needs today?',
       placeholder: 'Ask a question...',
       error: 'I apologize, I was unable to generate a response.',
-      connError: 'There was a connection error. Please try again later.'
+      connError: 'There was a connection error. Please try again later.',
+      quotaError: 'The AI Assistant is currently paused due to missing Google Cloud API Quota (Billing not activated). Please contact us directly via the contact form.'
     }
   }
 };
