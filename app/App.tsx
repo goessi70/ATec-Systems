@@ -14,6 +14,15 @@ import GeminiAssistant from '../components/GeminiAssistant';
 import CookieConsent from '../components/CookieConsent';
 import { translations, Language } from '../translations';
 
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
+
 const Navbar: React.FC<{ isDark: boolean; toggleTheme: () => void; lang: Language; setLang: (l: Language) => void }> = ({ isDark, toggleTheme, lang, setLang }) => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
@@ -210,6 +219,7 @@ const App: React.FC = () => {
     <HashRouter>
       <div className={`min-h-screen flex flex-col transition-colors duration-500 ${isDark ? 'bg-slate-950 text-slate-200' : 'bg-white text-slate-900'}`}>
         <Navbar isDark={isDark} toggleTheme={toggleTheme} lang={lang} setLang={setLang} />
+        <ScrollToTop />
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home isDark={isDark} lang={lang} />} />

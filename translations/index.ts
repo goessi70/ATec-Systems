@@ -41,7 +41,7 @@ export const translations = {
       },
       teamTitle: 'Führung & Expertise',
       teamSub: 'Wir setzen auf flache Hierarchien und gebündeltes Know-how in allen Sicherheitsbereichen.',
-      roles: ['Technik-Leitung', 'Projektplanung'],
+      roles: ['Inhaber', 'Inhaber'],
       founded: {
         tag: 'Historie',
         title: 'Unsere Gründung & Geschichte',
@@ -133,6 +133,7 @@ export const translations = {
       title: 'Impressum',
       provider: 'Angaben gemäß Anbieterkennzeichnung',
       represented: 'Vertreten durch',
+      representatives: 'Stefan Gössi, Philipp Schwerzmann, beide als Inhaber',
       contact: 'Kontakt',
       register: 'Registereintrag',
       vat: 'Mehrwertsteuer-Nummer',
@@ -207,7 +208,7 @@ export const translations = {
       },
       teamTitle: 'Leadership & Expertise',
       teamSub: 'We leverage flat hierarchies and concentrated expertise across all security domains.',
-      roles: ['Technical Director', 'Project Planning'],
+      roles: ['Owner', 'Owner'],
       founded: {
         tag: 'History',
         title: 'Our Foundation & History',
@@ -299,6 +300,7 @@ export const translations = {
       title: 'Imprint',
       provider: 'Provider Identification',
       represented: 'Represented by',
+      representatives: 'Stefan Gössi, Philipp Schwerzmann, both as Owners',
       contact: 'Contact',
       register: 'Register Entry',
       vat: 'VAT Identification Number',

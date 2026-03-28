@@ -25,7 +25,7 @@ const LegalNotice: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, la
 
           <section>
             <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.represented}</h2>
-            <p>Philipp Schwerzmann {lang === 'de' ? '(Geschäftsleitung)' : '(Management)'}</p>
+            <p>{t.representatives}</p>
           </section>
 
           <section>
@@ -34,22 +34,9 @@ const LegalNotice: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, la
             <p>Email: info@atec-systems.ch</p>
           </section>
 
-          <section>
-            <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.register}</h2>
-            <p>{lang === 'de' ? 'Eintragung im Handelsregister.' : 'Registered in the Commercial Register.'}</p>
-            <p>{lang === 'de' ? 'Registerort: Kanton Zug, Schweiz' : 'Register Location: Canton of Zug, Switzerland'}</p>
-            <p>{lang === 'de' ? 'Registernummer: CHE-123.456.789' : 'Registration Number: CHE-123.456.789'}</p>
-          </section>
-
-          <section>
-            <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.vat}</h2>
-            <p>{lang === 'de' ? 'Umsatzsteuer-Identifikationsnummer gemäß gesetzlichen Bestimmungen:' : 'VAT identification number according to statutory provisions:'}</p>
-            <p>CHE-123.456.789 MWST</p>
-          </section>
-
           <section className="pt-12 border-t border-slate-800/10">
-            <h2 className={`text-lg font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.disclaimer}</h2>
-            <p className="text-xs">
+            <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.disclaimer}</h2>
+            <p>
               {t.disclaimerText}
             </p>
           </section>

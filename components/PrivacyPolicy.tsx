@@ -14,7 +14,7 @@ const PrivacyPolicy: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, 
           <div className="w-20 h-1.5 bg-blue-600 rounded-full"></div>
         </div>
 
-        <div className={`space-y-12 text-sm leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
+        <div className={`space-y-12 text-base leading-relaxed ${isDark ? 'text-slate-300' : 'text-slate-600'}`}>
           <section>
             <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.section1Title}</h2>
             <h3 className="font-bold mb-2">{t.section1Sub}</h3>
@@ -38,8 +38,8 @@ const PrivacyPolicy: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, 
           </section>
 
           <section className="pt-12 border-t border-slate-800/10">
-            <h2 className={`text-lg font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.securityTitle}</h2>
-            <p className="text-xs">
+            <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.securityTitle}</h2>
+            <p>
               {t.securityText}
             </p>
           </section>
