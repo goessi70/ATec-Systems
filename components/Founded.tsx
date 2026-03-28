@@ -34,12 +34,14 @@ const Founded: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }
             <p className={`text-xl md:text-2xl font-bold mb-10 leading-tight text-blue-500`}>
               {t.subtitle}
             </p>
-            <p className={`text-base leading-relaxed mb-12 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
-              {t.content}
-            </p>
+            <div className={`text-base leading-relaxed mb-12 space-y-6 ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
+              {(Array.isArray(t.content) ? t.content : [t.content]).map((paragraph: string, index: number) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 mt-20">
             {t.milestones.map((milestone, i) => (
               <div key={i} className={`p-8 rounded-3xl border transition-all duration-500 hover:-translate-y-2 ${
                 isDark ? 'bg-slate-950 border-slate-800 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500/30 shadow-sm'

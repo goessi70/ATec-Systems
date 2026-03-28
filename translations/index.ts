@@ -46,12 +46,19 @@ export const translations = {
       founded: {
         tag: 'Historie',
         title: 'Unsere Gründung & Geschichte',
-        subtitle: 'Von der Aufbereitungstechnik zum modernen Sicherheitsunternehmen.',
-        content: 'Die Wurzeln der ATec Systems reichen zurück bis in das Jahr 1975. Was als spezialisiertes Unternehmen für Aufbereitungstechnik begann, hat sich über Jahrzehnte zu einem führenden Anbieter für Sicherheitssysteme entwickelt. Diese Transformation war geprägt von technologischem Fortschritt und dem unermüdlichen Streben nach höchster Qualität.',
+        subtitle: 'Drei Jahrzehnte im Dienst der Sicherheit',
+        content: [
+          'ATec‑Systems steht für zuverlässige, durchdachte und praxisorientierte Sicherheitslösungen. Als inhabergeführtes Einzelunternehmen konzipieren, vertreiben, installieren und unterhalten wir moderne Sicherheitsanlagen in den Bereichen Einbruchschutz, Brandschutz und Videoüberwachung.',
+          'Unsere Kundinnen und Kunden stammen aus dem Privatbereich, dem Gewerbe, der Industrie- und Lagerlogistik sowie aus dem Hotel- und Gastgewerbe. In all diesen Bereichen sind Sicherheit, Betriebskontinuität, Vertrauen und Verlässlichkeit entscheidende Faktoren – Werte, welche die tägliche Arbeit von ATec‑Systems prägen.',
+          'Die beiden Firmeninhaber sind seit 1994 in der Sicherheitsbranche tätig und verfügen über langjährige Erfahrung in der Planung, Umsetzung und Betreuung anspruchsvoller Sicherheitskonzepte. Dieses fundierte Know-how bildet die Grundlage unserer Arbeit und ermöglicht Lösungen, die technisch ausgereift, normgerecht und nachhaltig sind. Ihre Sicherheit ist unsere Motivation',
+          'Unser Anspruch ist es, keine standardisierten Systeme zu liefern, sondern individuell abgestimmte Sicherheitslösungen zu realisieren. Ob Einfamilienhaus, Gewerbebetrieb, Produktionsstätte, Lagerhalle oder Hotelbetrieb, jedes Objekt stellt eigene Anforderungen an den Schutz von Personen, Sachwerten und Infrastruktur. Wir legen grossen Wert auf eine persönliche Beratung, eine sorgfältige Risikoanalyse und eine präzise Planung.',
+          'ATec‑Systems begleitet seine Kundschaft über den gesamten Lebenszyklus einer Sicherheitsanlage – von der ersten Analyse über die Konzeption, die fachgerechte Installation bis zur regelmässigen Wartung, dem Pikettdienst und dem langfristigen Unterhalt. Dabei setzen wir ausschliesslich auf bewährte, qualitativ hochwertige Systeme und Komponenten, die den heutigen Sicherheits- und Qualitäts-anforderungen entsprechen.',
+          'Sicherheitstechnik ist Vertrauenssache. Unsere Kundinnen und Kunden verlassen sich darauf, dass die installierten Systeme zuverlässig funktionieren und im entscheidenden Moment Schutz bieten. Vertrauen entsteht durch Ehrlichkeit, Transparenz und Fachkompetenz. Verlässlichkeit zeigt sich in sauberer Ausführung, termingerechter Umsetzung sowie einer partnerschaftlichen Betreuung auch nach der Installation.',
+          'Als Einzelunternehmung stehen wir für kurze Entscheidungswege, persönliche Verantwortung und direkte Erreichbarkeit. Unsere Kunden schätzen den konstanten Ansprechpartner, die hohe Flexibilität sowie unseren konsequenten Qualitätsanspruch. Diskretion, Nachhaltigkeit und kontinuierliche Weiterbildung sind für uns selbstverständlich.',
+          'ATec‑Systems – Sicherheit aus Erfahrung, getragen von Vertrauen und Verlässlichkeit.'
+        ],
         milestones: [
-          { year: '1975', title: 'Gründung', desc: 'Gründung als Aufbereitungstechnik AG mit Fokus auf Industriemaschinen.' },
-          { year: '2009', title: 'Strategische Neuausrichtung', desc: 'Generationenwechsel und Fokusverschiebung auf Sicherheitstechnik.' },
-          { year: '2015', title: 'Ajax Partnerschaft', desc: 'Beginn der exklusiven Zusammenarbeit mit AJAX Systems.' },
+          { year: '2025', title: 'Ajax Partnerschaft', desc: 'Beginn der exklusiven Zusammenarbeit mit AJAX Systems.' },
           { year: '2026', title: 'Umfassende Lösungen', desc: 'Einführung neuer, ganzheitlicher Sicherheitskonzepte.' }
         ]
       }
@@ -219,12 +226,19 @@ export const translations = {
       founded: {
         tag: 'History',
         title: 'Our Foundation & History',
-        subtitle: 'From specialized technology to modern security solutions.',
-        content: 'The roots of ATec Systems date back to 1975. What began as a specialized engineering firm has evolved over decades into a leading provider of security systems. This transformation has been driven by technological advancement and a tireless commitment to quality.',
+        subtitle: 'Three decades in the service of security.',
+        content: [
+          'ATec-Systems stands for reliable, sophisticated, and practical security solutions. As an independent enterprise, we design, distribute, install, and maintain modern security systems in the fields of intrusion protection, fire protection, and video surveillance.',
+          'Our customers come from the private sector, commerce, industry, warehouse logistics, as well as the hotel and hospitality industry. In all these areas, security, business continuity, trust, and reliability are crucial factors—values that shape the daily work of ATec-Systems.',
+          'Both firm owners have been active in the security industry since 1994 and possess many years of experience in planning, implementing, and managing demanding security concepts. This profound expertise forms the foundation of our work and enables solutions that are technically mature, standard-compliant, and sustainable. Your security is our motivation.',
+          'Our claim is not to deliver standardized systems, but to realize individually tailored security solutions. Whether a single-family home, commercial enterprise, production facility, warehouse, or hotel operation—each property has its own requirements for the protection of people, assets, and infrastructure. We attach great importance to personal consultation, careful risk analysis, and precise planning.',
+          'ATec-Systems accompanies its customers throughout the entire life cycle of a security system—from the initial analysis and conception to professional installation, regular maintenance, on-call service, and long-term support. In doing so, we exclusively rely on proven, high-quality systems and components that meet today\'s security and quality standards.',
+          'Security technology is a matter of trust. Our clients rely on the installed systems to function dependably and provide protection when it matters most. Trust is built through honesty, transparency, and professional competence. Reliability is demonstrated through clean execution, timely implementation, and partnership-based support even after installation.',
+          'As an independent enterprise, we stand for short decision-making processes, personal responsibility, and direct accessibility. Our customers appreciate having a constant contact person, high flexibility, and our consistent commitment to quality. Discretion, sustainability, and continuous training are a matter of course for us.',
+          'ATec-Systems – Security built on experience, supported by trust and reliability.'
+        ],
         milestones: [
-          { year: '1975', title: 'Founding', desc: 'Established as Aufbereitungstechnik AG with a focus on industrial machinery.' },
-          { year: '2009', title: 'Strategic Realignment', desc: 'Generational transition and strategic shift to security technology.' },
-          { year: '2015', title: 'Ajax Partnership', desc: 'Beginning of our exclusive partnership with AJAX Systems.' },
+          { year: '2025', title: 'Ajax Partnership', desc: 'Beginning of our exclusive partnership with AJAX Systems.' },
           { year: '2026', title: 'Holistic Solutions', desc: 'Introduction of new, comprehensive security concepts.' }
         ]
       }
