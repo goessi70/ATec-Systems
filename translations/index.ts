@@ -222,19 +222,58 @@ export const translations = {
     },
     privacy: {
       tag: 'Rechtliches',
-      title: 'Datenschutz',
-      section1Title: '1. Datenschutz auf einen Blick',
-      section1Sub: 'Allgemeine Hinweise',
-      section1Text: 'Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie unsere Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.',
-      section2Title: '2. Datenerfassung auf unserer Website',
-      section2Sub: 'Wer ist verantwortlich?',
-      section2Text: 'Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.',
-      section3Title: '3. Ihre Rechte',
-      section3Text: 'Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu erhalten.',
-      cookiesTitle: 'Cookies und ähnliche Technologien',
-      cookiesText: 'Wir verwenden Cookies und ähnliche Technologien, um die Benutzererfahrung zu verbessern und die Sicherheit unserer Website zu gewährleisten. Diese Technologien helfen uns zu verstehen, wie Besucher mit unserer Website interagieren.',
-      securityTitle: 'Sicherheitshinweis',
-      securityText: 'Wir weisen darauf hin, dass die Datenübertragung im Internet Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist nicht möglich.'
+      title: 'Datenschutzerklärung Atec Systems',
+      sections: [
+        {
+          title: '1. Allgemeine Hinweise',
+          text: ['Der Schutz Ihrer persönlichen Daten ist uns ein wichtiges Anliegen. In dieser Datenschutzerklärung informieren wir Sie darüber, welche personenbezogenen Daten wir erheben und wie wir diese verwenden.']
+        },
+        {
+          title: '2. Verantwortliche Stelle',
+          text: ['Atec Systems Allrütiweg 9 CH-6343 Rotkreuz (ZG) info@atec-systems.ch +41 (0) 79 51 80 10']
+        },
+        {
+          title: '3. Erhebung und Speicherung personenbezogener Daten',
+          text: [
+            '<span class="font-bold">a) Beim Besuch der Website</span><br/>Beim Aufrufen unserer Website werden automatisch Informationen erfasst, die Ihr Browser an unseren Server übermittelt. Dies sind insbesondere:',
+            '<ul class="list-disc pl-5 mt-2 space-y-2"><li>IP-Adresse</li><li>Datum und Uhrzeit der Anfrage</li><li>Browsertyp und -version</li><li>Betriebssystem</li><li>Referrer-URL</li></ul>',
+            'Diese Daten dienen der Sicherstellung eines reibungslosen Betriebs der Website.',
+            '<span class="font-bold">b) Kontaktaufnahme</span><br/>Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage gespeichert.'
+          ]
+        },
+        {
+          title: '4. Zweck der Datenverarbeitung',
+          text: ['Wir verarbeiten Ihre Daten zu folgenden Zwecken:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Bereitstellung der Website</li><li>Kommunikation mit Kunden und Interessenten</li><li>Verbesserung unserer Dienstleistungen</li><li>Erfüllung gesetzlicher Verpflichtungen</li></ul>']
+        },
+        {
+          title: '5. Rechtsgrundlagen der Verarbeitung',
+          text: ['Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 DSGVO auf Basis:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Ihrer Einwilligung</li><li>zur Vertragserfüllung</li><li>zur Erfüllung rechtlicher Verpflichtungen</li><li>berechtigter Interessen</li></ul>']
+        },
+        {
+          title: '6. Weitergabe von Daten',
+          text: ['Eine Weitergabe Ihrer personenbezogenen Daten erfolgt nur, wenn:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Sie ausdrücklich eingewilligt haben</li><li>dies gesetzlich erforderlich ist</li><li>dies zur Vertragsabwicklung notwendig ist</li></ul>']
+        },
+        {
+          title: '7. Speicherdauer',
+          text: ['Wir speichern personenbezogene Daten nur so lange, wie dies für die jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen.']
+        },
+        {
+          title: '8. Ihre Rechte',
+          text: ['Sie haben das Recht:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>auf Auskunft über Ihre gespeicherten Daten</li><li>auf Berichtigung unrichtiger Daten</li><li>auf Löschung Ihrer Daten</li><li>auf Einschränkung der Verarbeitung</li><li>auf Datenübertragbarkeit</li><li>auf Widerruf Ihrer Einwilligung</li></ul>']
+        },
+        {
+          title: '9. Datensicherheit',
+          text: ['Wir verwenden geeignete technische und organisatorische Maßnahmen, um Ihre Daten gegen Manipulation, Verlust oder unbefugten Zugriff zu schützen.']
+        },
+        {
+          title: '10. Cookies',
+          text: ['Unsere Website verwendet Cookies. Diese dienen dazu, unser Angebot nutzerfreundlicher und effektiver zu machen. Sie können die Speicherung von Cookies in Ihrem Browser deaktivieren.']
+        },
+        {
+          title: '11. Änderungen der Datenschutzerklärung',
+          text: ['Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen.']
+        }
+      ]
     },
     cookieBanner: {
       text: 'Wir verwenden Cookies und ähnliche Technologien, um das Nutzererlebnis auf unserer Webseite zu verbessern, unseren Datenverkehr zu analysieren und Inhalte und Werbung zu personalisieren.',
@@ -470,19 +509,58 @@ export const translations = {
     },
     privacy: {
       tag: 'Legal',
-      title: 'Data Protection',
-      section1Title: '1. Privacy at a Glance',
-      section1Sub: 'General Information',
-      section1Text: 'The following information provides a simple overview of what happens to your personal data when you visit our website. Personal data is any data that can be used to identify you personally.',
-      section2Title: '2. Data Collection on Our Website',
-      section2Sub: 'Who is responsible?',
-      section2Text: 'Data processing on this website is carried out by the website operator.',
-      section3Title: '3. Your Rights',
-      section3Text: 'You have the right at any time to receive information about the origin, recipient, and purpose of your stored personal data free of charge.',
-      cookiesTitle: 'Cookies and Similar Technologies',
-      cookiesText: 'We use cookies and similar technologies to enhance user experience and ensure the security of our website. These technologies help us understand how visitors interact with our website.',
-      securityTitle: 'Security Note',
-      securityText: 'Please note that data transmission over the internet can have security vulnerabilities. Absolute protection of data against access by third parties is not possible.'
+      title: 'Atec Systems Privacy Policy',
+      sections: [
+        {
+          title: '1. General Information',
+          text: ['The protection of your personal data is important to us. In this privacy policy, we inform you about what personal data we collect and how we use it.']
+        },
+        {
+          title: '2. Responsible Entity',
+          text: ['Atec Systems Allrütiweg 9 CH-6343 Rotkreuz (ZG) info@atec-systems.ch +41 (0) 79 51 80 10']
+        },
+        {
+          title: '3. Collection and Storage of Personal Data',
+          text: [
+            '<span class="font-bold">a) When visiting the website</span><br/>When you visit our website, information is automatically recorded that your browser transmits to our server. This includes in particular:',
+            '<ul class="list-disc pl-5 mt-2 space-y-2"><li>IP address</li><li>Date and time of the request</li><li>Browser type and version</li><li>Operating system</li><li>Referrer URL</li></ul>',
+            'This data serves to ensure the smooth operation of the website.',
+            '<span class="font-bold">b) Contact</span><br/>If you contact us via email or contact form, your details will be stored for processing the request.'
+          ]
+        },
+        {
+          title: '4. Purpose of Data Processing',
+          text: ['We process your data for the following purposes:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Provision of the website</li><li>Communication with customers and prospects</li><li>Improvement of our services</li><li>Fulfillment of legal obligations</li></ul>']
+        },
+        {
+          title: '5. Legal Basis of Processing',
+          text: ['The processing of your data is carried out in accordance with Art. 6 GDPR based on:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Your consent</li><li>Fulfillment of a contract</li><li>Fulfillment of legal obligations</li><li>Legitimate interests</li></ul>']
+        },
+        {
+          title: '6. Disclosure of Data',
+          text: ['Your personal data will only be disclosed if:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>You have expressly consented</li><li>This is required by law</li><li>This is necessary for contract execution</li></ul>']
+        },
+        {
+          title: '7. Storage Duration',
+          text: ['We only store personal data for as long as necessary for the respective purposes or as required by statutory retention periods.']
+        },
+        {
+          title: '8. Your Rights',
+          text: ['You have the right:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>To information about your stored data</li><li>To the correction of incorrect data</li><li>To the deletion of your data</li><li>To restrict processing</li><li>To data portability</li><li>To withdraw your consent</li></ul>']
+        },
+        {
+          title: '9. Data Security',
+          text: ['We use appropriate technical and organizational measures to protect your data against manipulation, loss, or unauthorized access.']
+        },
+        {
+          title: '10. Cookies',
+          text: ['Our website uses cookies. These serve to make our offer more user-friendly and effective. You can disable the storage of cookies in your browser.']
+        },
+        {
+          title: '11. Changes to the Privacy Policy',
+          text: ['We reserve the right to adapt this privacy policy as necessary.']
+        }
+      ]
     },
     cookieBanner: {
       text: 'We use cookies and similar technologies to enhance the user experience on our website, analyze our traffic, and personalize content and advertising.',
