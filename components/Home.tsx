@@ -100,8 +100,16 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
                   isDark ? 'bg-slate-900/95 border-slate-800' : 'bg-white/95 border-slate-200 text-slate-900'
                 }`}>
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-xl">
-                      <i className={`fas ${slides[currentSlide].icon}`}></i>
+                    <div className={`h-12 bg-blue-600 rounded-2xl flex items-center justify-center text-white transition-all duration-300 ${currentSlide === 0 ? 'px-4 space-x-2.5' : 'w-12 text-xl'}`}>
+                      {currentSlide === 0 ? (
+                        <>
+                          <i className="fas fa-shield-halved text-sm" title="Einbruchschutz"></i>
+                          <i className="fas fa-fire-alt text-sm" title="Brandschutz"></i>
+                          <i className="fas fa-video text-sm" title="Videoüberwachung"></i>
+                        </>
+                      ) : (
+                        <i className={`fas ${slides[currentSlide].icon}`}></i>
+                      )}
                     </div>
                     <div>
                       <div className="text-[9px] uppercase font-black tracking-widest opacity-50 mb-1">{t.tagline}</div>
