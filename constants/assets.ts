@@ -96,7 +96,7 @@ export const ASSETS = {
     list: [
       { 
         id: 1, category: 'Alarm', 
-        de: { name: 'Superior Hub G3 Jeweller', desc: 'Kabellose Hub-Zentrale mit Fotoverifizierung. Anschließbar über Ethernet, WLAN und zwei SIM-Karten (2G/LTE).' },
+        de: { name: 'Superior Hub G3 Jeweller', desc: 'Kabellose Hub-Zentrale mit Fotoverifizierung. Anschliessbar über Ethernet, WLAN und zwei SIM-Karten (2G/LTE).' },
         en: { name: 'Superior Hub G3 Jeweller', desc: 'Wireless hub control panel with photo verification. Connects via Ethernet, Wi-Fi, and two SIM cards (2G/LTE).' },
         img: 'https://i.imgur.com/LF3cA29.png' 
       },

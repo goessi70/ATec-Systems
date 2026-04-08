@@ -139,14 +139,27 @@ export const translations = {
     legal: {
       tag: 'Rechtliches',
       title: 'Impressum',
-      provider: 'Angaben gemäß Anbieterkennzeichnung',
+      provider: 'Angaben gemäss Anbieterkennzeichnung',
       represented: 'Vertreten durch',
       representatives: 'Stefan Gössi, Philipp Schwerzmann, beide als Inhaber',
       contact: 'Kontakt',
       register: 'Registereintrag',
       vat: 'Mehrwertsteuer-Nummer',
       disclaimer: 'Haftungsausschluss',
-      disclaimerText: 'Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.'
+      disclaimerSections: [
+        {
+          title: 'Haftung für Inhalte',
+          text: 'Als Diensteanbieter sind wir gemäss den allgemeinen Gesetzen für eigene Inhalte auf diesen Seiten verantwortlich. Wir übernehmen jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Haftungsansprüche gegen uns, welche sich auf Schäden materieller oder ideeller Art beziehen, die durch die Nutzung oder Nichtnutzung der dargebotenen Informationen bzw. durch die Nutzung fehlerhafter und unvollständiger Informationen verursacht wurden, sind grundsätzlich ausgeschlossen, sofern unsererseits kein nachweislich vorsätzliches oder grob fahrlässiges Verschulden vorliegt.'
+        },
+        {
+          title: 'Haftung für Links',
+          text: 'Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.'
+        },
+        {
+          title: 'Urheberrecht und Kennzeichenrecht',
+          text: 'Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet.'
+        }
+      ]
     },
     agbPage: {
       tag: 'Rechtliches',
@@ -247,7 +260,7 @@ export const translations = {
         },
         {
           title: '5. Rechtsgrundlagen der Verarbeitung',
-          text: ['Die Verarbeitung Ihrer Daten erfolgt gemäß Art. 6 DSGVO auf Basis:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Ihrer Einwilligung</li><li>zur Vertragserfüllung</li><li>zur Erfüllung rechtlicher Verpflichtungen</li><li>berechtigter Interessen</li></ul>']
+          text: ['Die Verarbeitung Ihrer Daten erfolgt gemäss Art. 6 DSGVO auf Basis:', '<ul class="list-disc pl-5 mt-2 space-y-2"><li>Ihrer Einwilligung</li><li>zur Vertragserfüllung</li><li>zur Erfüllung rechtlicher Verpflichtungen</li><li>berechtigter Interessen</li></ul>']
         },
         {
           title: '6. Weitergabe von Daten',
@@ -263,7 +276,7 @@ export const translations = {
         },
         {
           title: '9. Datensicherheit',
-          text: ['Wir verwenden geeignete technische und organisatorische Maßnahmen, um Ihre Daten gegen Manipulation, Verlust oder unbefugten Zugriff zu schützen.']
+          text: ['Wir verwenden geeignete technische und organisatorische Massnahmen, um Ihre Daten gegen Manipulation, Verlust oder unbefugten Zugriff zu schützen.']
         },
         {
           title: '10. Cookies',
@@ -433,7 +446,20 @@ export const translations = {
       register: 'Register Entry',
       vat: 'VAT Identification Number',
       disclaimer: 'Disclaimer',
-      disclaimerText: 'Despite careful content control, we assume no liability for the content of external links. The operators of linked sites are solely responsible for their content.'
+      disclaimerSections: [
+        {
+          title: 'Liability for Content',
+          text: 'As a service provider, we are responsible for our own content on these pages according to general laws. However, we assume no liability for the correctness, completeness, and timeliness of the content provided. Liability claims against us relating to material or immaterial damage caused by the use or non-use of the information provided or by the use of incorrect and incomplete information are fundamentally excluded, provided there is no demonstrable intentional or grossly negligent fault on our part.'
+        },
+        {
+          title: 'Liability for Links',
+          text: 'Our offer contains links to external websites of third parties, on whose contents we have no influence. Therefore, we cannot assume any liability for these external contents. The respective provider or operator of the pages is always responsible for the contents of the linked pages. A permanent control of the contents of the linked pages is not reasonable without concrete evidence of a violation of law. Upon notification of violations, we will remove such links immediately.'
+        },
+        {
+          title: 'Copyright and Trademark Law',
+          text: 'The content and works created by the site operators on these pages are subject to Swiss copyright law. The duplication, processing, distribution, and any kind of exploitation outside the limits of copyright require the written consent of the respective author or creator. Downloads and copies of this site are only permitted for private, non-commercial use. Insofar as the contents on this site were not created by the operator, the copyrights of third parties are respected. In particular, third-party content is identified as such.'
+        }
+      ]
     },
     agbPage: {
       tag: 'Legal',

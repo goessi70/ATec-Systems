@@ -35,10 +35,15 @@ const LegalNotice: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, la
           </section>
 
           <section className="pt-12 border-t border-slate-800/10">
-            <h2 className={`text-xl font-bold mb-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.disclaimer}</h2>
-            <p>
-              {t.disclaimerText}
-            </p>
+            <h2 className={`text-xl font-bold mb-6 ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.disclaimer}</h2>
+            <div className="space-y-6">
+              {t.disclaimerSections.map((section, idx) => (
+                <div key={idx}>
+                  <h3 className={`text-lg font-semibold mb-2 ${isDark ? 'text-white' : 'text-slate-900'}`}>{section.title}</h3>
+                  <p className="text-sm leading-relaxed">{section.text}</p>
+                </div>
+              ))}
+            </div>
           </section>
         </div>
       </div>
