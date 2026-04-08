@@ -96,7 +96,7 @@ const Products: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
             <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.5em] px-5 py-2.5 rounded-full mb-10">
               {t.bannerTag}
             </span>
-            <h2 className={`text-2xl md:text-4xl font-black mb-10 leading-none tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            <h2 className={`text-xl sm:text-2xl md:text-4xl font-black mb-10 leading-none tracking-tight sm:tracking-normal whitespace-nowrap ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {t.bannerTitle}
             </h2>
             <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>
