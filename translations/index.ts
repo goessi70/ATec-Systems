@@ -222,7 +222,7 @@ export const translations = {
     },
     privacy: {
       tag: 'Rechtliches',
-      title: 'Datenschutzerklärung Atec Systems',
+      title: 'Datenschutzerklärung ATec Systems',
       sections: [
         {
           title: '1. Allgemeine Hinweise',
@@ -509,7 +509,7 @@ export const translations = {
     },
     privacy: {
       tag: 'Legal',
-      title: 'Atec Systems Privacy Policy',
+      title: 'ATec Systems Privacy Policy',
       sections: [
         {
           title: '1. General Information',
