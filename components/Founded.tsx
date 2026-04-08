@@ -27,7 +27,7 @@ const Founded: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }
             <span className="inline-block bg-blue-600 text-white text-[9px] font-black uppercase tracking-[0.5em] px-5 py-2.5 rounded-full mb-10">
               {t.tag}
             </span>
-            <h1 className={`text-4xl md:text-7xl font-black mb-10 leading-none tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
+            <h1 className={`text-3xl md:text-5xl font-black mb-10 leading-none tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {t.title}
             </h1>
             <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>

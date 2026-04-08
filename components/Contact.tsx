@@ -66,7 +66,7 @@ const ContactContent: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark,
           <div className="lg:w-1/3 space-y-12">
             <div>
               <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t.tag}</span>
-              <h2 className={`text-3xl md:text-5xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h2>
+              <h2 className={`text-2xl md:text-4xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h2>
               <div className="w-20 h-1.5 bg-blue-600 mb-8 rounded-full"></div>
               <p className={`text-sm ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
                 {t.subtitle}

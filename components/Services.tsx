@@ -12,7 +12,7 @@ const Services: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-24">
           <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t.tag}</span>
-          <h2 className={`text-3xl md:text-5xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h2>
+          <h2 className={`text-2xl md:text-4xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>{t.title}</h2>
           <div className="w-20 h-1.5 bg-blue-600 mb-8 mx-auto rounded-full"></div>
           <p className={`max-w-2xl mx-auto text-base ${isDark ? 'text-slate-400' : 'text-slate-600'}`}>
             {t.subtitle}

@@ -10,7 +10,7 @@ const PrivacyPolicy: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <span className="text-blue-500 font-bold uppercase tracking-[0.5em] text-[10px] mb-6 block">{t?.tag || 'Datenschutz'}</span>
-          <h1 className={`text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black mb-8 tracking-normal whitespace-nowrap ${isDark ? 'text-white' : 'text-slate-900'}`}>{t?.title || 'Datenschutzerklärung'}</h1>
+          <h1 className={`text-lg sm:text-xl md:text-3xl lg:text-4xl font-black mb-8 tracking-normal whitespace-nowrap ${isDark ? 'text-white' : 'text-slate-900'}`}>{t?.title || 'Datenschutzerklärung'}</h1>
           <div className="w-20 h-1.5 bg-blue-600 rounded-full"></div>
         </div>
 
