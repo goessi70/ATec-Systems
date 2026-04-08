@@ -230,7 +230,7 @@ export const translations = {
         },
         {
           title: '2. Verantwortliche Stelle',
-          text: ['Atec Systems Allrütiweg 9 CH-6343 Rotkreuz (ZG) info@atec-systems.ch +41 (0) 79 51 80 10']
+          text: ['Atec Systems<br/>Allrütiweg 9<br/>CH-6343 Rotkreuz (ZG)<br/><a href="mailto:info@atec-systems.ch" class="text-blue-500 hover:underline">info@atec-systems.ch</a><br/><a href="tel:+4179518010" class="text-blue-500 hover:underline">+41 (0) 79 51 80 10</a>']
         },
         {
           title: '3. Erhebung und Speicherung personenbezogener Daten',
@@ -517,7 +517,7 @@ export const translations = {
         },
         {
           title: '2. Responsible Entity',
-          text: ['Atec Systems Allrütiweg 9 CH-6343 Rotkreuz (ZG) info@atec-systems.ch +41 (0) 79 51 80 10']
+          text: ['Atec Systems<br/>Allrütiweg 9<br/>CH-6343 Rotkreuz (ZG)<br/><a href="mailto:info@atec-systems.ch" class="text-blue-500 hover:underline">info@atec-systems.ch</a><br/><a href="tel:+4179518010" class="text-blue-500 hover:underline">+41 (0) 79 51 80 10</a>']
         },
         {
           title: '3. Collection and Storage of Personal Data',
