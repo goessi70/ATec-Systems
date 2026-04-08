@@ -49,7 +49,7 @@ const Home: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) =
               </div>
               
               <div key={`content-${currentSlide}`} className="animate-slideUp space-y-6">
-                <h1 className={`text-2xl md:text-5xl font-black leading-tight tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                <h1 className={`text-xl sm:text-2xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight sm:tracking-normal whitespace-nowrap ${isDark ? 'text-white' : 'text-slate-900'}`}>
                   {slideData.title}
                 </h1>
                 <p className={`text-base font-bold ${isDark ? 'text-blue-400' : 'text-blue-600'}`}>
