@@ -76,7 +76,7 @@ const About: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) 
             <h2 className={`text-2xl md:text-4xl font-black mb-8 tracking-normal ${isDark ? 'text-white' : 'text-slate-900'}`}>
               {t.teamTitle}
             </h2>
-            <p className={`text-sm ${isDark ? 'text-slate-500' : 'text-slate-400'}`}>{t.teamSub}</p>
+            <p className={`text-lg ${isDark ? 'text-slate-300' : 'text-slate-500'}`}>{t.teamSub}</p>
           </div>
         </div>
 
