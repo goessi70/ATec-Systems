@@ -82,8 +82,8 @@ export const ASSETS = {
   about: {
     team: "https://i.imgur.com/NJZqknE.png",
     members: [
-      { name: 'Philipp Schwerzmann', img: 'https://i.imgur.com/lln0osi.png' },
-      { name: 'Stefan Gössi', img: 'https://i.imgur.com/ukHC0s1.png' },
+      { name: 'Philipp Schwerzmann', img: '/assets/images/philipp_schwerzmann.jpg' },
+      { name: 'Stefan Gössi', img: '/assets/images/stefan_goessi.jpg' },
     ]
   },
   products: {

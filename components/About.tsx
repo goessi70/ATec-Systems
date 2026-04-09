@@ -86,7 +86,7 @@ const About: React.FC<{ isDark: boolean; lang: Language }> = ({ isDark, lang }) 
               isDark ? 'bg-slate-900 border-slate-800 hover:border-blue-500/30' : 'bg-white border-slate-200 hover:border-blue-500/30 shadow-sm hover:shadow-2xl'
             }`}>
               <div className="relative aspect-[4/5] overflow-hidden bg-slate-800/10">
-                <img src={member.img} alt={member.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 group-hover:shadow-xl transition-all duration-1000" />
+                <img src={member.img} alt={member.name} className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 group-hover:scale-105 group-hover:shadow-xl transition-all duration-1000" />
                 <div className="absolute top-8 left-8">
                   <span className="bg-blue-600 text-white px-5 py-2 rounded-full text-[9px] font-black uppercase tracking-widest">
                     {t.roles[i]}
